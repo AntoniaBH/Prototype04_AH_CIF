@@ -1,0 +1,91 @@
+﻿title: Act_02
+tags:
+---
+<<declare $ChosenCoffee = false>>
+<<declare $ChosenTea = false>>
+<<declare $BrushTeethAbsolved = false>>
+<<declare $WashFaceAbsolved = false>>
+<<declare $QuickShowerAbsolved = false>>
+<<declare $Bathroom_03Absolved = false>>
+
+...
+<<jump AbnormalRoutine>>
+===
+
+title: AbnormalRoutine
+---
+...
+->Turn alarm off.
+	...
+->Leave it.
+	...
+...
+<<jump Bathroom_03>>
+===
+
+title: Bathroom_03
+---
+<<if $BrushTeethAbsolved is true and $WashFaceAbsolved is true and $QuickShower is true>>
+	<<set $Bathroom_03Absolved = true>>
+<<elseif $Bathroom_03Absolved is true>>
+	...
+	<<jump Kitchen_02>>
+<<endif>>
+->Brush teeth.
+	<<if $BrushTeethAbsolved is true>>
+		...
+		<<jump Bathroom_03>>
+	<<else>>
+	...
+	<<set $BrushTeethAbsolved = true>>
+	<<endif>>
+->Wash face.
+	<<if $WashFaceAbsolved is true>>
+		...
+		<<jump Bathroom_03>>
+	<<else>>
+	...
+	<<set $WashFaceAbsolved = true>>
+	<<endif>>
+->Quick Shower
+	<<if $QuickShower is true>>
+		...
+		<<jump Bathroom_03>>
+	<<else>>
+	...
+	<<set $QuickShower = true>>
+	<<endif>>
+===
+
+title: Kitchen_02
+---
+<<if $ChosenCoffee is true and $ChosenTea is false>>
+	->Tea.
+		...
+		<<set $ChosenTea = true>>
+		<<jump Kitchen_02>>
+<<elseif $ChosenTea is true and $ChosenCoffee is false>>
+	->Coffee.
+		...
+		<<set $ChosenCoffee = true>>
+		<<jump Kitchen_02>>
+<<elseif $ChosenCoffee is true and $ChosenTea is true>>
+	...
+	<<jump Kitchen_03>>
+<<endif>>
+...
+->Coffee.
+	...
+	<<set $ChosenCoffee = true>>
+	<<jump Kitchen_02>>
+	
+->Tea.
+	...
+	<<set $ChosenTea = true>>
+	<<jump Kitchen_02>>
+===
+
+title: Kitchen_03
+---
+...
+===

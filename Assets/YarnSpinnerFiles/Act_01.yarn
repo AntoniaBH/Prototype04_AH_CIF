@@ -4,77 +4,239 @@ tags:
 <<declare $Bathroom_01Unlocked = false>>
 <<declare $Livingroom_01Unlocked = false>>
 <<declare $Bathroom_02Unlocked = false>>
+<<declare $Act_01_RepeatCount = 0>>
+<<declare $BrushTeethAbsolved = false>>
+<<declare $WashFaceAbsolved = false>>
+<<declare $QuickShowerAbsolved = false>>
+<<declare $CleanAbsolved = false>>
+<<declare $LaundryAbsolved = false>>
+<<declare $DishesAbsolved = false>>
+<<declare $WaterPlantsAbsolved = false>>
 
-...
+[Screen fades in from black, revealing grainy news broadcast. The words "BREAKING NEWS" pulse in red at the bottom of the screen. a well-dressed anchor, looks directly at the camera.]
+News Anchor: "We interrupt our regular programming to bring urgent breaking news. A catastrophic explosion has devastated the Helios rresearch facility late last night, reducing much of the government-sanctioned laboratory to smolderin ruins."
+[Brief cut to areial footage of the facility: a shattered compley engulfed in flames, Thick PLumes of black smoke rising into the night sky. The skeletal remains of buildings crumble inward as a emergency teams struggle against the blaze.]
+News Anchor: "The cause of the explosion remains unknown at this time. Emergency responders have confirmed that nearly all personnel present at the time of the incident have perished. However, amidst the devastation, officials have reported one miraculous survivor."
+[The footage cuts back to the anchor. Their voice lowers slightly, as if delivering something sensitive.]
+News Anchor: "Due to security concerns, the survivor's identity remains undisclosed. Authorities have assured the public that the individual is receiving medical attention and is under strict observation."
+[A pause. The anchor glances briefly at their notes before continuing.]
+News Anchor: "As the search for additional survivors continues, officials caution that the situation may soon transition from a rescue to a recovery operation. The fire, fueled by experimental chemicals stored within the facility, continues to burn uncontrollably."
+[A brief cut to an on-the-ground reporter, standing near the disaster site, their face illuminated by the flickering glow of the still-burning wreckage.]
+News Anchor: "The scene behind me is one of absolute devastation. What was once a cutting-edge research facility is now little more than a blackened skeleton of steel and stone. First responders have yet to retrieve any more survivors, and with the fire still raging, authorities admit that hope is dwindling."
+[The camera zooms in on the ruins. A twisted metal beam juts out from the wreckage, warped by the heat. In the distance, faint, flickering embers dance in the cold air, as if clinging to something unseen.]
+**There would be no more survivors. They never were. There could never be.**
+[A lingering silence. The news broadcast continues, but the words grow distorted, distant—like sound struggling through water.]
+[Suddenly, a sharp beeping sound cuts through the haze. Once. Twice. Then again, growing more insistent.]
+[The screen flickers. Darkness.]
+[The beeping persists. The black screen shifts subtly as faint light spills in from the edges. A breath—a sharp inhale. Then, a single movement.]
+[A click. The screen fully transitions.]
+A bedroom.
+The alarm continues to ring. The beeping comes from a phone laying ceaselessly on the nightstand, its glow casting long shadows across the cluttered desk beside it. Papers, notes, half-drunk cups of coffee. A world reduced to remnants of what once was.
+A woman stirs beneath the tangled sheets, her soft, middle-length brown hair splayed across the pillow. A single arm—long, thin, lightly muscular—reaches out from beneath the covers, fumbling for the blaring device. Her fingers hover over the screen for a moment before hesitating.
+**This is Lysandra. A survivor.**
+The sound of the alarm pierces through the remnants of a dream—no, a memory.
+Another day begins once again.
+<<jump RepeatRoutine_01>>
+===
+
+title: RepeatRoutine_01
+---
+[Alarm Beeping]
+<<set $Act_01_RepeatCount = $Act_01_RepeatCount +1>>
 ->Turn alarm off.
-	...
+	<<if $Act_01_RepeatCount = 1>>
+		Lysandra sluggishly reaches for her phone, silencing the alarm with a swipe. 
+		A moment of stillness. 
+		Then, with a quiet sigh, she pushes the sheets aside and sits up, stretching her arms over her head. 
+		The air is stale, carrying the faint scent of forgotten coffee. 
+		Without another thought, she rises from the bed and makes her way to the bathroom.
+		<<jump Bathroom_01>>
+	<<elseif $Act_01_RepeatCount =2>>
+		...
+		<<jump Bathroom_01>>
+	<<elseif $Act_01_RepeatCount =3>>
+		...
+		<<jump Bathroom_01>>
+	<<endif>>
 ->Leave it.
-	...
-
-...
-<<jump Bathroom_01>>
+	<<if $Act_01_RepeatCount = 1>>
+		The alarm continues its relentless beeping. Lysandra groans, burying her face deeper into the pillow. A few more seconds pass before she finally caves, grabbing her phone and shutting it off with a slow, reluctant movement. 
+		She stretches lazily in bed, twisting to one side before rolling onto her back. The ceiling stares back at her, blank and unfeeling. 
+		Eventually, she exhales and swings her legs over the side of the bed, dragging herself toward the bathroom.
+		<<jump Bathroom_01>>
+	<<elseif $Act_01_RepeatCount =2>>
+		...
+		<<jump Bathroom_01>>
+	<<elseif $Act_01_RepeatCount =3>>
+		...
+		<<jump Bathroom_01>>
+	<<endif>>
 ===
 
 title: Bathroom_01
 ---
-<<if  is $Bathroom_01Unlocked is true>>
-	...
+Lysandra enters the bathroom, blinking at her own reflection in the mirror. 
+The fluorescent light buzzes softly overhead, casting a pale glow over the small space.
+<<jump ChoiceTree_01>>
+===
+
+title: ChoiceTree_01
+---
+<<if $BrushTeethAbsolved is true and $WashFaceAbsolved is true and $QuickShowerAbsolved is true>>
+	<<set $Bathroom_01_Unlocked = true>>
+<<endif>>
+<<if $Bathroom_01Unlocked is true>>
 	<<jump Breakfast_01>>
 <<endif>>
 ->Brush teeth.
-	...
-	<<jump Bathroom_01>>
+	<<if $BrushTeethAbsolved is false>>
+		Lysandra grabs her toothbrush and absentmindedly begins brushing. 
+		Her mind drifts elsewhere—static thoughts, fragments of yesterday blending with the monotony of today.
+		<<jump ChoiceTree_01>>
+	<<elseif $BrushTeethAbsolved is true>>
+		**There’s no need to do this again. Routine is repetition, but even she knows when to move on.**
+		<<jump ChoiceTree_01>>
+	<<endif>>
 ->Wash face.
-	...
-	<<jump Bathroom_01>>
+	<<if $WashFaceAbsolved is false>>
+		She turns on the faucet, splashing cold water over her face. 
+		The sensation jolts her slightly, bringing a fleeting moment of clarity before she rubs in the face wash and rinses away the lingering drowsiness.
+		<<jump ChoiceTree_01>>
+	<<elseif $WashFaceAbsolved is true>>
+		**There’s no need to do this again. Routine is repetition, but even she knows when to move on.**
+		<<jump ChoiceTree_01>>
+	<<endif>>
 ->Quick shower.
-	...
-	<<jump Bathroom_01>>
+	<<if $QuickShowerAbsolved is false>>
+		Lysandra steps into the shower, letting the water cascade over her.
+		It’s not about relaxation—it’s just another task, another necessity. 
+		A quick rinse. No need to linger.
+		<<jump ChoiceTree_01>>
+	<<elseif $QuickShowerAbsolved is true>>
+		**There’s no need to do this again. Routine is repetition, but even she knows when to move on.**
+		<<jump ChoiceTree_01>>
+	<<endif>>
 ===
 
 title: Breakfast_01
 ---
-...
+Lysandra shuffles into the kitchen, the faint hum of the refrigerator filling the silence. 
+The room is dimly lit, the morning light struggling to pierce through the blinds. S
+he stands in front of the counter, staring blankly at the appliances, as if deciding what to do next requires more energy than she can muster.
 ->Make coffee.
-	...
+	Lysandra reaches for the coffee grounds, her movements mechanical. 
+	The grinder whirs to life, shattering the quiet. She pours the dark powder into the filter, the scent of roasted beans briefly filling the air. 
+	As the coffee drips into the pot, she leans against the counter, her gaze fixed on the slow, steady stream.
+	**The coffee brews, its aroma a fleeting comfort. For a moment, the world feels still—but only for a moment.**
 ->Make tea.
-	...
-...
+	Lysandra opens the cabinet, her fingers brushing against a box of tea bags.
+	She selects one, the label faded from years of use, and places it in a mug.
+	The kettle whistles, a sharp sound that cuts through the haze.
+	She pours the water, watching as the tea bag bobs in the steaming liquid.
+	**The tea steeps, its warmth a small rebellion against the coldness of the morning. But even warmth is temporary.**
 ->Put toast in toaster.
-	...
+	Lysandra grabs a slice of bread and slides it into the toaster.
+	The coils glow red, and she watches as the bread slowly browns.
+	When it pops up, she spreads a thin layer of butter, the knife scraping against the surface.
+	**The toast is crisp, its edges golden. A simple pleasure, but one that feels hollow in the face of everything else.**
 ->Get cereal & milk.
-	...
-...
+	Lysandra pours cereal into a bowl, the sound of the pieces clattering against the ceramic oddly loud.
+	She adds milk, the liquid pooling around the edges.
+	She eats mechanically, the taste barely registering.
+	**The cereal is sweet, but the sweetness feels distant, as if it belongs to someone else’s morning.** 
+Lysandra sits at the table, her breakfast in front of her. 
+The TV flickers in the background, the news anchor’s voice a low murmur. 
+She stares at the screen, her mind drifting as the images blur together.
+**The news plays, a constant stream of tragedies and triumphs. But to Lysandra, it’s all noise—a reminder of a world that moves on, indifferent to her struggles.**
 ->Work in office.
-	...
-	->Have lunch.
-		...
-	->Skip lunch.
-		...
+	Lysandra grabs her bag and heads out the door. 
+	The streets are busy, the hum of traffic a dull roar.
+	She boards the bus, finding a seat by the window.
+	The ride is uneventful, the passing scenery a blur.
+	When she arrives at the office, she takes her place at her desk, logging into the company software with a sigh.
+	**The office is a maze of cubicles, each one a tiny world of its own. Lysandra’s desk is no different—a space filled with papers and half-finished tasks, a reflection of her fractured mind.**
+	->Check Emails.
+		Lysandra opens her inbox, scanning the messages. 
+		Most are mundane—meeting reminders, project updates. But one catches her eye, the subject line vague yet unsettling.
+		She hesitates, then closes the tab without opening it.
+		**The email sits unread, a small act of defiance. But even unopened, it lingers in her mind, a reminder of something she can’t quite name.**
+		->Have Lunch
+			Lysandra grabs a pre-packaged sandwich from the cafeteria and returns to her desk. She eats in silence, the taste bland and unremarkable.
+			**The sandwich is dry, the flavors muted. It’s sustenance, nothing more—a reminder that even nourishment can feel empty.**
+		->Skip Lunch
+			Lysandra decides to skip lunch, the gnawing hunger a distant sensation. She continues working, the hours blending together.
+			**Lunch is skipped, the hunger ignored. But even in skipping it, she feels its absence—a void that grows with each passing moment.**
+		After a long day, Lysandra heads home. The bus ride is quiet, the streets now empty. She arrives at her apartment, putting her bag down and stretching.
+		**The apartment welcomes her back, its familiarity a small comfort. But even here, the shadows linger, a reminder of what she’s lost.**
+		<<jump Livingroom_01>>
+	->Dont Check Emails.
+		Lysandra ignores her inbox, focusing instead on her work. The screen blurs as she types, her thoughts drifting.
+		**The emails go unchecked, a small rebellion against the demands of the world. But even in ignoring them, she feels their weight.**
+		->Have Lunch
+			Lysandra grabs a pre-packaged sandwich from the cafeteria and returns to her desk. She eats in silence, the taste bland and unremarkable.
+			**The sandwich is dry, the flavors muted. It’s sustenance, nothing more—a reminder that even nourishment can feel empty.**
+		->Skip Lunch
+			Lysandra decides to skip lunch, the gnawing hunger a distant sensation. She continues working, the hours blending together.
+			**Lunch is skipped, the hunger ignored. But even in skipping it, she feels its absence—a void that grows with each passing moment.**
+		After a long day, Lysandra heads home. The bus ride is quiet, the streets now empty. She arrives at her apartment, putting her bag down and stretching.
+		**The apartment welcomes her back, its familiarity a small comfort. But even here, the shadows linger, a reminder of what she’s lost.**
+		<<jump Livingroom_01>>
 ->Work from home.
-	...
-	->Have lunch.
-		...
-	->Skip lunch.
-		...
-...
-<<jump Livingroom_01>>
+	Lysandra settles onto the couch, her laptop open in front of her. 
+	The screen glows, casting a pale light on her face. 
+	She types slowly, her thoughts scattered.
+	**The apartment is quiet, the silence almost oppressive. But even here, the weight of her past follows her, a shadow she can’t escape.**
+	->Check Emails.
+		Lysandra opens her inbox, scanning the messages. 
+		Most are mundane—meeting reminders, project updates. But one catches her eye, the subject line vague yet unsettling.
+		She hesitates, then closes the tab without opening it.
+		**The email sits unread, a small act of defiance. But even unopened, it lingers in her mind, a reminder of something she can’t quite name.**
+		->Have Lunch
+			Lysandra reheats leftovers in the microwave, the smell filling the apartment. She eats on the couch, her laptop still open in front of her.
+			**The leftovers are warm, but the warmth is fleeting. Even food, a basic necessity, feels like a chore.**
+		->Skip Lunch
+			Lysandra decides to skip lunch, the gnawing hunger a distant sensation. She continues working, the hours blending together.
+			**Lunch is skipped, the hunger ignored. But even in skipping it, she feels its absence—a void that grows with each passing moment.**
+		Lysandra closes her laptop, the screen going dark. She stands, stretching her stiff limbs.
+		**The work is done, but the weight remains. Even in stillness, the world feels heavy.**
+		<<jump Livingroom_01>>
+	->Dont Check Emails.
+		Lysandra ignores her inbox, focusing instead on her work. The screen blurs as she types, her thoughts drifting.
+		**The emails go unchecked, a small rebellion against the demands of the world. But even in ignoring them, she feels their weight.**
+		->Have Lunch
+			Lysandra reheats leftovers in the microwave, the smell filling the apartment. She eats on the couch, her laptop still open in front of her.
+			**The leftovers are warm, but the warmth is fleeting. Even food, a basic necessity, feels like a chore.**
+		->Skip Lunch
+			Lysandra decides to skip lunch, the gnawing hunger a distant sensation. She continues working, the hours blending together.
+			**Lunch is skipped, the hunger ignored. But even in skipping it, she feels its absence—a void that grows with each passing moment.**
+		Lysandra closes her laptop, the screen going dark. She stands, stretching her stiff limbs.
+		**The work is done, but the weight remains. Even in stillness, the world feels heavy.**
+		<<jump Livingroom_01>>
 ===
 
 title: Livingroom_01
 ---
+<<if $CleanAbsolved is true and $LaundryAbsolved is true and $DishesAbsolved is true and $WaterPlantsAbsolved is true>>
+	<<set $Livingroom_01Unlocked = true>>
 <<if $Livingroom_01Unlocked is true>>
-	...
 	<<jump Kitchen_01>>
-<<endif>>
+<<else>>
 ->clean.
-	...
+	<<if $CleanAbsolved is false>>
+		Lysandra grabs a rag and begins wiping down the surfaces, the motion repetitive and soothing. She sweeps the floors, the dust swirling in the air before settling.
+		**Cleaning is a small act of control, a way to impose order on chaos. But even clean surfaces can’t erase the stains of the past.**
+		<<set $CleanAbsolved is true>>
+	<<elseif $CleanAbsolved is true>>
+		...
+		<<jump Livingroom_01>>
+	<<endif>>
 ->Laundry.
 	...
 ->Dishes.
 	...
 ->Water plants.
 	...
+<<endif>>
 ===
 
 title: Kitchen_01
@@ -101,17 +263,34 @@ title: Bathroom_02
 <<if $Bathroom_02Unlocked is true>>
 	...
 	<<jump Bedroom_01>>
-<<endif>>
+<<else>>
 ->Change.
 	...
 	<<jump Bathroom_02>>
 ->Brush teeth.
 	...
 	<<jump Bathroom_02>>
+<<endif>>
 ===
 
 title: Bedroom_01
 ---
+<<if $Act_01_RepeatCount >= 3>>
+	...
+	->Open.
+		...
+		<<jump Act_02>>
+	->Do not.
+		...
+		<<jump Ending_01>>
+<<endif>>
 ...
 <<jump RepeatRoutine_01>>
+===
+
+title: Ending_01
+---
+
+...
+
 ===
