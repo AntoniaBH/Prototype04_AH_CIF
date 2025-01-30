@@ -167,6 +167,7 @@ Lysandra sits at the table, her breakfast in front of her.
 The TV flickers in the background, the news anchor’s voice a low murmur. 
 She stares at the screen, her mind drifting as the images blur together.
 **The news plays, a constant stream of tragedies and triumphs. But to Lysandra, it’s all noise—a reminder of a world that moves on, indifferent to her struggles.**
+...
 ->Work in office.
 	<<set $WorkInOffice = true>>
 	Lysandra grabs her bag and heads out the door. 
@@ -218,8 +219,6 @@ title: LunchBreak
 	->Skip Lunch
 		Lysandra decides to skip lunch, the gnawing hunger a distant sensation. She continues working, the hours blending together.
 		**Lunch is skipped, the hunger ignored. But even in skipping it, she feels its absence—a void that grows with each passing moment.**
-		Lysandra closes her laptop, the screen going dark. She stands, stretching her stiff limbs.
-		**The work is done, but the weight remains. Even in stillness, the world feels heavy.**
 		<<jump Livingroom_01>>
 <<endif>>
 ===
@@ -231,7 +230,8 @@ title: Livingroom_01
 	**The apartment welcomes her back, its familiarity a small comfort. But even here, the shadows linger, a reminder of what she’s lost.**
 	<<jump ChoiceTree_02>>
 <<elseif $WorkFromHome is true>>	
-	...
+	Lysandra closes her laptop, the screen going dark. She stands, stretching her stiff limbs.
+	**The work is done, but the weight remains. Even in stillness, the world feels heavy.**
 	<<jump ChoiceTree_02>>
 <<endif>>
 ===
@@ -378,9 +378,11 @@ Lysandra wakes up, her movements sluggish as she reaches for her phone.
 (The screen fades in, revealing the same bedroom, the same cluttered desk, the same half-drunk cups of coffee.)
 **Another day begins, the cycle unbroken. The world outside moves on, indifferent to her struggles. But for Lysandra, time feels stagnant, a loop she can’t escape.**
 ->Turn off.
-	...
+	The alarm rings, sharp and insistent. Lysandra stirs, her hand fumbling for the phone. She silences it with a swipe, the screen going dark.
+	**The alarm stops, but the silence that follows is heavier. Another day begins, indistinguishable from the last.**
 ->Leave it.
-	...
+	The alarm rings, sharp and insistent. Lysandra buries her face in the pillow, letting it blare. After a moment, she reaches out and silences it, her movements slow and reluctant.
+	**The alarm fades, but its echo lingers. Even in resistance, she yields to the inevitable.**
 **Choices are made, but they feel hollow. Each action is a repetition, a reminder that even the smallest decisions can’t change the inevitable.**
 As Lysandra goes about her day, the letter reappears in different places—on the kitchen counter, on her desk, on the couch. Each time, she ignores it, tossing it aside or leaving it where it lies.
 **The letter is a constant, a reminder of what she refuses to face. But even in ignoring it, she feels its presence—a shadow that grows with each passing day.**
