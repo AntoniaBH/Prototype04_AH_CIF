@@ -3,11 +3,11 @@ tags:
 ---
 <<declare $ChosenCoffee = false>>
 <<declare $ChosenTea = false>>
-<<declare $BrushTeethAbsolved = false>>
-<<declare $WashFaceAbsolved = false>>
-<<declare $QuickShowerAbsolved = false>>
-<<declare $Bathroom_03Absolved = false>>
-
+<<set $BrushTeethAbsolved = false>>
+<<set $WashFaceAbsolved = false>>
+<<set $QuickShowerAbsolved = false>>
+<<declare $ChosenToast = false>>
+<<declare $ChosenCereal = false>>
 ...
 <<jump AbnormalRoutine>>
 ===
@@ -26,8 +26,6 @@ title: AbnormalRoutine
 title: Bathroom_03
 ---
 <<if $BrushTeethAbsolved is true and $WashFaceAbsolved is true and $QuickShower is true>>
-	<<set $Bathroom_03Absolved = true>>
-<<elseif $Bathroom_03Absolved is true>>
 	...
 	<<jump Kitchen_02>>
 <<endif>>
@@ -35,7 +33,7 @@ title: Bathroom_03
 	<<if $BrushTeethAbsolved is true>>
 		...
 		<<jump Bathroom_03>>
-	<<else>>
+	<<elseif $BrushTeethAbsolved is false>>
 	...
 	<<set $BrushTeethAbsolved = true>>
 	<<endif>>
@@ -43,7 +41,7 @@ title: Bathroom_03
 	<<if $WashFaceAbsolved is true>>
 		...
 		<<jump Bathroom_03>>
-	<<else>>
+	<<elseif $WashFaceAbsolved is false>>
 	...
 	<<set $WashFaceAbsolved = true>>
 	<<endif>>
@@ -51,29 +49,30 @@ title: Bathroom_03
 	<<if $QuickShower is true>>
 		...
 		<<jump Bathroom_03>>
-	<<else>>
+	<<elseif $QuickShowerAbsolved is false>>
 	...
-	<<set $QuickShower = true>>
+	<<set $QuickShowerAbsolved = true>>
+	<<jump Bathroom_03>>
 	<<endif>>
 ===
 
 title: Kitchen_02
 ---
-<<if $ChosenCoffee is true and $ChosenTea is false>>
-	->Tea.
-		...
-		<<set $ChosenTea = true>>
-		<<jump Kitchen_02>>
+<<if $ChosenCoffee is true and $ChosenTea is true>>
+	...
+	<<jump Kitchen_03>>
+<<elseif $ChosenCoffee is true and $ChosenTea is false>>
+	...
+	<<set $ChosenTea = true>>
+	<<jump Kitchen_02>>
 <<elseif $ChosenTea is true and $ChosenCoffee is false>>
-	->Coffee.
-		...
-		<<set $ChosenCoffee = true>>
-		<<jump Kitchen_02>>
+	...
+	<<set $ChosenCoffee = true>>
+	<<jump Kitchen_02>>
 <<elseif $ChosenCoffee is true and $ChosenTea is true>>
 	...
 	<<jump Kitchen_03>>
 <<endif>>
-...
 ->Coffee.
 	...
 	<<set $ChosenCoffee = true>>
@@ -86,6 +85,70 @@ title: Kitchen_02
 ===
 
 title: Kitchen_03
+---
+<<if $ChosenToast is true and $ChosenCereal is true>>
+	...
+	<<jump ChoiceTree_03>>
+<<elseif $ChosenToast is true and $ChosenCereal is false>>
+	...
+	<<set $ChosenCereal = true>>
+	<<jump Kitchen_03>>
+<<elseif $ChosenCereal is true and $ChosenToast is false>>
+	...
+	<<set $ChosenToast = true>>
+	<<jump Kitchen_03>>
+<<endif>>
+->Toasted toast.
+	...
+	<<set $ChosenToast = true>>
+	<<jump Kitchen_03
+->Cereal & milk. 
+	...
+	<<set $ChosesnCereal = true>>
+	<<jump Kitchen_03>> 
+...
+===
+
+title: ChoiceTree_03
+---
+...
+->"..left them at work..."
+	...
+	<<jump Office_01>> 
+->"...have to be here..."
+	...
+	<<jump Home_01>>
+===
+
+title: Office_01
+---
+...
+<<jump Home_02>>
+===
+
+title: Home_01
+---
+...
+<<jump Home_02>>
+===
+
+title: Home_02
+---
+...
+->Open it.
+	...
+->Do not open it.
+	...
+...
+->Open it.
+	...
+->Do not open it.
+	...
+...
+<<jump Flashback_01>>
+===
+
+title: Flashback_01
 ---
 ...
 ===
