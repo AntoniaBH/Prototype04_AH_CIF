@@ -348,11 +348,11 @@ title: Bedroom_01
 	...
 	->Open.
 		Lysandra hesitates, then opens the letter.
-		[Contents of the letter]
+		(Dr. Lysandra Aerterna, did you think you could bury the past? Lock it away in the ruins, let time swallow the truth? Time is not what you believe it to be. It was never linear, never fixed. You of all people should know that. You built the door.You opened it. And now, the echoes remain. They are waiting for you. She is waiting for you. *distorted Sentence* The past is not a prison. It is a puzzle. Do not let them rewrite it. Find me before they do.)
 		Her heart races as she reads, the words stirring something deep within her.
 		**The letter is a crack in the facade, a glimpse of something beyond the monotony. But even cracks can lead to deeper fractures.**
 		<<jump Act_02>>
-	->Do not.
+	->Do not.s
 		Lysandra tosses the letter aside, dismissing it as spam. She heads to bed, the letter forgotten.
 		**The letter is ignored, its secrets left unread. But even in ignoring it, she feels its presence—a shadow she can’t quite shake.**
 		<<jump Ending_01>>
