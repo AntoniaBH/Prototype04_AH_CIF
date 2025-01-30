@@ -101,7 +101,7 @@ title: Kitchen_03
 ->Toasted toast.
 	...
 	<<set $ChosenToast = true>>
-	<<jump Kitchen_03
+	<<jump Kitchen_03>>
 ->Cereal & milk. 
 	...
 	<<set $ChosesnCereal = true>>
