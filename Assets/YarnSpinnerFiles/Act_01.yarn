@@ -1,9 +1,6 @@
 ﻿title: Start
 tags:
 ---
-<<declare $Bathroom_01Unlocked = false>>
-<<declare $Livingroom_01Unlocked = false>>
-<<declare $Bathroom_02Unlocked = false>>
 <<declare $Act_01_RepeatCount = 0>>
 <<declare $BrushTeethAbsolved = false>>
 <<declare $WashFaceAbsolved = false>>
@@ -15,7 +12,7 @@ tags:
 <<declare $WorkInOffice = false>>
 <<declare $WorkFromHome = false>>
 <<declare $ChangeAbsolved = false>>
-
+<<declare $BaseSuccesRate = 35>>
 (Screen fades in from black, revealing grainy news broadcast. The words "BREAKING NEWS" pulse in red at the bottom of the screen. a well-dressed anchor, looks directly at the camera.)
 News Anchor: "We interrupt our regular programming to bring urgent breaking news. A catastrophic explosion has devastated the Helios research facility late last night, reducing much of the government-sanctioned laboratory to smolderin ruins."
 (Brief cut to areial footage of the facility. A shattered compley engulfed in flames, Thick plumes of black smoke rising into the night sky. The skeletal remains of buildings crumble inward as a emergency teams struggle against the blaze.)
@@ -38,17 +35,55 @@ A bedroom.
 The alarm continues to ring. 
 The beeping comes from a phone laying ceaselessly on the nightstand, its glow casting long shadows across the cluttered desk beside it. Papers, notes, half-drunk cups of coffee. A world reduced to remnants of what once was.
 A woman stirs beneath the tangled sheets, her soft, middle-length brown hair splayed across the pillow. A single arm—long, thin, lightly muscular—reaches out from beneath the covers, fumbling for the blaring device. Her fingers hover over the screen for a moment before hesitating.
-**This is Lysandra. A survivor.**
+This is Lysandra. A survivor.
 The sound of the alarm pierces through the remnants of a dream—no, a memory.
-And yet.
+And yet...
 Another day begins, once again.
 <<jump RepeatRoutine_01>>
 ===
 
 title: RepeatRoutine_01
 ---
-...
-(Alarm Beeping)
+<<if $Act_01_RepeatCount is 0>>
+	The faint glow of the alarm casts long shadows across the room, illuminating the clutter on her desk—papers, notes, half-drunk cups of coffee. 
+	The air is stale, carrying the faint scent of forgotten coffee and dust.
+	The room is a snapshot of her life—fragments of a past she can’t quite remember and a present she can’t quite escape. The clutter is a testament to her attempts to fill the void, but even the chaos feels empty.
+	The sound is grating, but it’s also familiar—a constant in a world that feels increasingly fractured. She hesitates, her mind caught between the urge to silence it and the desire to let it ring, as if the noise might drown out the thoughts she can’t escape.
+	As we start another day of Lysandra’s life, it begins with the same choice as usual. A small decision, but one that echoes the larger patterns of her existence—patterns she can’t seem to break.
+<<elseif $Act_01_RepeatCount is 2>>
+	<<set $BrushTeethAbsolved = false>>
+	<<set $WashFaceAbsolved = false>>
+	<<set $QuickShowerAbsolved = false>>
+	<<set $CleanAbsolved = false>>
+	<<set $LaundryAbsolved = false>>
+	<<set $DishesAbsolved = false>>
+	<<set $WaterPlantsAbsolved = false>>
+	<<set $WorkInOffice = false>>
+	<<set $WorkFromHome = false>>
+	<<set $ChangeAbsolved = false>>
+	The glow of the alarm barely reaches the corners of the room. Shadows stretch long and unmoving.
+	The air is thick, stale. The scent of old coffee lingers, but even that feels distant.
+	Nothing changes. Not the room. Not the silence. Not her.
+	The alarm rings. She reaches for it without thinking. There is no hesitation. No thought.
+	Just another morning. Just another day.
+<<elseif $Act_01_RepeatCount is 3>>
+	<<set $BrushTeethAbsolved = false>>
+	<<set $WashFaceAbsolved = false>>
+	<<set $QuickShowerAbsolved = false>>
+	<<set $CleanAbsolved = false>>
+	<<set $LaundryAbsolved = false>>
+	<<set $DishesAbsolved = false>>
+	<<set $WaterPlantsAbsolved = false>>
+	<<set $WorkInOffice = false>>
+	<<set $WorkFromHome = false>>
+	<<set $ChangeAbsolved = false>>
+	Dim light. Stagnant air. Dust in the silence.
+	Everything still. Everything the same.
+	The alarm rings. She moves.
+	And time moves with her.
+	<<endif>>
+The alarm cuts through the silence—sharp, rhythmic, unrelenting. Shadows stretch with the sluggish morning light, the air thick with the scent of stale coffee and time left standing too long. 
+The world feels distant, muffled. Only the ringing remains.
 <<set $Act_01_RepeatCount = $Act_01_RepeatCount +1>>
 ->Turn alarm off.
 	<<if $Act_01_RepeatCount is 1>>
@@ -59,10 +94,17 @@ title: RepeatRoutine_01
 		Without another thought, she rises from the bed and makes her way to the bathroom.
 		<<jump Bathroom_01>>
 	<<elseif $Act_01_RepeatCount is 2>>
-		...
+		Lysandra reaches for her phone, silencing the alarm with a slow swipe.
+		A breath. A pause.
+		She pushes the sheets aside and sits up, rubbing her face.
+		The air is thick, unmoving. Coffee. Dust. Nothing new.
+		She stands. The bathroom waits.
 		<<jump Bathroom_01>>
 	<<elseif $Act_01_RepeatCount is 3>>
-		...
+		The alarm stops. Lysandra moves.
+		Sheets shift. Air lingers.
+		She stands.
+		The bathroom.
 		<<jump Bathroom_01>>
 	<<endif>>
 ->Leave it.
@@ -72,10 +114,16 @@ title: RepeatRoutine_01
 		Eventually, she exhales and swings her legs over the side of the bed, dragging herself toward the bathroom.
 		<<jump Bathroom_01>>
 	<<elseif $Act_01_RepeatCount is 2>>
-		...
+		The alarm persists. Lysandra exhales, pressing her face into the pillow.
+		Seconds pass. Then, finally, she reaches for her phone, silencing the noise with a sluggish swipe.
+		She stretches, eyes lingering on the ceiling—blank, unmoving.
+		With another breath, she swings her legs over the bed and rises. The bathroom waits.
 		<<jump Bathroom_01>>
 	<<elseif $Act_01_RepeatCount is 3>>
-		...
+		The alarm. Then silence.
+		A breath. A stretch.
+		The ceiling stares.
+		She moves.
 		<<jump Bathroom_01>>
 	<<endif>>
 ===
@@ -87,10 +135,13 @@ title: Bathroom_01
 The fluorescent light buzzes softly overhead, casting a pale glow over the small space.
 	<<jump ChoiceTree_01>>
 <<elseif $Act_01_RepeatCount is 2>>
-	...
+	Lysandra steps into the bathroom. Her reflection greets her—unfamiliar, distant.
+	The fluorescent light hums, cold and unchanging.
 	<<jump ChoiceTree_01>>
 <<elseif $Act_01_RepeatCount is 3>>
-	...
+	She enters.
+	A face in the mirror.
+	The light buzzes.
 	<<jump ChoiceTree_01>>
 <<endif>>
 ===
@@ -98,267 +149,631 @@ The fluorescent light buzzes softly overhead, casting a pale glow over the small
 title: ChoiceTree_01
 ---
 <<if $BrushTeethAbsolved is true and $WashFaceAbsolved is true and $QuickShowerAbsolved is true>>
-	<<set $Bathroom_01_Unlocked = true>>
-<<endif>>
-<<if $Bathroom_01Unlocked is true>>
 	<<jump Breakfast_01>>
 <<endif>>
 ->Brush teeth.
 	<<if $BrushTeethAbsolved is false>>
-		Lysandra grabs her toothbrush and absentmindedly begins brushing. 
-		Her mind drifts elsewhere—static thoughts, fragments of yesterday blending with the monotony of today.
-		<<set $BrushTeethAbsolved = true>>
-		<<jump ChoiceTree_01>>
+		<<if $Act_01_RepeatCount is 1>>
+			Lysandra grabs her toothbrush and absentmindedly begins brushing. 
+			Her mind drifts elsewhere—static thoughts, fragments of yesterday blending with the monotony of today.
+			<<set $BrushTeethAbsolved = true>>
+			<<jump ChoiceTree_01>>
+		<<elseif $Act_01_RepeatCount is 2>>
+			Lysandra brushes her teeth, the motion automatic.
+			Her thoughts blur—yesterday, today, the same.
+			<<set $BrushTeethAbsolved = true>>
+			<<jump ChoiceTree_01>>
+		<<elseif $Act_01_RepeatCount is 3>>
+			Brush. Spit. Repeat.
+			Everything blends.
+			<<set $BrushTeethAbsolved = true>>
+			<<jump ChoiceTree_01>>
+		<<endif>>
 	<<elseif $BrushTeethAbsolved is true>>
-		**There’s no need to do this again. Routine is repetition, but even she knows when to move on.**
-		<<jump ChoiceTree_01>>
+		<<if $Act_01_RepeatCount is 1>>
+			There’s no need to do this again. Routine is repetition, but even she knows when to move on.
+			<<jump ChoiceTree_01>>
+		<<elseif $Act_01_RepeatCount is 2>>
+			There’s no point. Routine repeats, but even she feels the weight of it.
+			<<jump >>
+		<<elseif $Act_01_RepeatCount is 3>>
+			No need. No meaning. Just echoes.
+			<<jump >>
+		<<endif>>
 	<<endif>>
 ->Wash face.
 	<<if $WashFaceAbsolved is false>>
-		She turns on the faucet, splashing cold water over her face. 
-		The sensation jolts her slightly, bringing a fleeting moment of clarity before she rubs in the face wash and rinses away the lingering drowsiness.
-		<<set $WashFaceAbsolved = true>>
-		<<jump ChoiceTree_01>>
+		<<if $Act_01_RepeatCount is 1>>
+			She turns on the faucet, splashing cold water over her face. 
+			The sensation jolts her slightly, bringing a fleeting moment of clarity before she rubs in the face wash and rinses away the lingering drowsiness.
+			<<set $WashFaceAbsolved = true>>
+			<<jump ChoiceTree_01>>
+		<<elseif $Act_01_RepeatCount is 2>>
+			She turns on the faucet, cold water hitting her skin. A brief shock—then nothing.
+			<<set $WashFaceAbsolved = true>>
+			<<jump ChoiceTree_01>>
+		<<elseif $Act_01_RepeatCount is 3>>
+			Water. Cold. Fleeting. She barely feels it.
+			<<set $WashFaceAbsolved = true>>
+			<<jump ChoiceTree_01>>
+		<<endif>>
 	<<elseif $WashFaceAbsolved is true>>
-		**There’s no need to do this again. Routine is repetition, but even she knows when to move on.**
-		<<jump ChoiceTree_01>>
+		<<if $Act_01_RepeatCount is 1>>
+			There’s no need to do this again. Routine is repetition, but even she knows when to move on.
+			<<jump ChoiceTree_01>>
+		<<elseif $Act_01_RepeatCount is 2>>
+			There’s no point. Routine repeats, but even she feels the weight of it.
+			<<jump ChoiceTree_01>>
+		<<elseif $Act_01_RepeatCount is 3>>
+			No need. No meaning. Just echoes.
+			<<jump ChoiceTree_01>>
+		<<endif>>
 	<<endif>>
 ->Quick shower.
 	<<if $QuickShowerAbsolved is false>>
-		Lysandra steps into the shower, letting the water cascade over her.
-		It’s not about relaxation—it’s just another task, another necessity. 
-		A quick rinse. No need to linger.
-		<<set $QuickShowerAbsolved = true>>
-		<<jump ChoiceTree_01>>
+		<<if $Act_01_RepeatCount is 1>>
+			Lysandra steps into the shower, letting the water cascade over her.
+			It’s not about relaxation—it’s just another task, another necessity. 
+			A quick rinse. No need to linger.
+			<<set $QuickShowerAbsolved = true>>
+			<<jump ChoiceTree_01>>
+		<<elseif $Act_01_RepeatCount is 2>>
+			Lysandra steps in. Water falls. Just another task.
+			<<set $QuickShowerAbsolved = true>>
+			<<jump ChoiceTree_01>>
+		<<elseif $Act_01_RepeatCount is 3>>
+			Water runs. She stands there. Nothing changes.
+			<<set $QuickShowerAbsolved = true>>
+			<<jump ChoiceTree_01>>
+		<<endif>>
 	<<elseif $QuickShowerAbsolved is true>>
-		**There’s no need to do this again. Routine is repetition, but even she knows when to move on.**
-		<<jump ChoiceTree_01>>
+		<<if $Act_01_RepeatCount is 1>>
+			There’s no need to do this again. Routine is repetition, but even she knows when to move on.
+			<<jump ChoiceTree_01>>
+		<<elseif $Act_01_RepeatCount is 2>>
+			There’s no point. Routine repeats, but even she feels the weight of it.
+			<<jump ChoiceTree_01>>
+		<<elseif $Act_01_RepeatCount is 3>>
+			No need. No meaning. Just echoes.
+			<<jump ChoiceTree_01>>
+		<<endif>>
 	<<endif>>
 ===
 
 title: Breakfast_01
 ---
-Lysandra shuffles into the kitchen, the faint hum of the refrigerator filling the silence. 
-The room is dimly lit, the morning light struggling to pierce through the blinds. S
-he stands in front of the counter, staring blankly at the appliances, as if deciding what to do next requires more energy than she can muster.
+<<if $Act_01_RepeatCount is 1>>
+	Lysandra shuffles into the kitchen, the faint hum of the refrigerator filling the silence. 
+	The room is dimly lit, the morning light struggling to pierce through the blinds.
+	She stands in front of the counter, staring blankly at the appliances, as if deciding what to do next requires more energy than she can muster.
+<<elseif $Act_01_RepeatCount is 2>>
+	Lysandra enters the kitchen. The fridge hums. She stands, staring.
+<<elseif $Act_01_RepeatCount is 3>>
+	She stops. The fridge hums. The light barely reaches her.
+<<endif>>
 ->Make coffee.
-	Lysandra reaches for the coffee grounds, her movements mechanical. 
-	The grinder whirs to life, shattering the quiet. She pours the dark powder into the filter, the scent of roasted beans briefly filling the air. 
-	As the coffee drips into the pot, she leans against the counter, her gaze fixed on the slow, steady stream.
-	**The coffee brews, its aroma a fleeting comfort. For a moment, the world feels still—but only for a moment.**
+	<<if $Act_01_RepeatCount is 1>>
+		Lysandra reaches for the coffee grounds, her movements mechanical. 
+		The grinder whirs to life, shattering the quiet. She pours the dark powder into the filter, the scent of roasted beans briefly filling the air. 
+		As the coffee drips into the pot, she leans against the counter, her gaze fixed on the slow, steady stream.
+		The coffee brews, its aroma a fleeting comfort. For a moment, the world feels still—but only for a moment.
+	<<elseif $Act_01_RepeatCount is 2>>
+		Lysandra grinds the beans. The scent fades too quickly. She watches the coffee drip, unmoving.
+	<<elseif $Act_01_RepeatCount is 3>>
+		The grinder hums. The coffee drips. She waits, but for what?
+	<<endif>>
 ->Make tea.
-	Lysandra opens the cabinet, her fingers brushing against a box of tea bags.
-	She selects one, the label faded from years of use, and places it in a mug.
-	The kettle whistles, a sharp sound that cuts through the haze.
-	She pours the water, watching as the tea bag bobs in the steaming liquid.
-	**The tea steeps, its warmth a small rebellion against the coldness of the morning. But even warmth is temporary.**
-...
+	<<if $Act_01_RepeatCount is 1>>
+		Lysandra opens the cabinet, her fingers brushing against a box of tea bags.
+		She selects one, the label faded from years of use, and places it in a mug.
+		The kettle whistles, a sharp sound that cuts through the haze.
+		She pours the water, watching as the tea bag bobs in the steaming liquid.
+		The tea steeps, its warmth a small rebellion against the coldness of the morning. But even warmth is temporary.
+	<<elseif $Act_01_RepeatCount is 2>>
+		She drops the tea bag into the mug. The kettle whistles. Steam rises, then fades.
+	<<elseif $Act_01_RepeatCount is 3>>
+		Water pours. The tea darkens. She waits, but nothing changes.
+	<<endif>>
+<<if $Act_01_RepeatCount is 1>>
+	Lysandra stands in the kitchen, the warmth of her drink seeping into her hands.
+	The faint hum of the refrigerator fills the silence, the room dimly lit by the struggling morning light.
+	She stares at the counter, the appliances waiting like silent sentinels.
+	The thought of choosing what to eat feels heavy, but the emptiness in her stomach demands an answer.
+<<elseif $Act_01_RepeatCount is 2>>
+
+<<elseif $Act_01_RepeatCount is 3>>
+
+<<endif>>
 ->Put toast in toaster.
-	Lysandra grabs a slice of bread and slides it into the toaster.
-	The coils glow red, and she watches as the bread slowly browns.
-	When it pops up, she spreads a thin layer of butter, the knife scraping against the surface.
-	**The toast is crisp, its edges golden. A simple pleasure, but one that feels hollow in the face of everything else.**
+	<<if $Act_01_RepeatCount is 1>>
+		Lysandra grabs a slice of bread and slides it into the toaster.
+		The coils glow red, and she watches as the bread slowly browns.
+		When it pops up, she spreads a thin layer of butter, the knife scraping against the surface.
+		The toast is crisp, its edges golden. A simple pleasure, but one that feels hollow in the face of everything else.
+	<<elseif $Act_01_RepeatCount is 2>>
+		The toaster hums. The bread browns. She spreads butter, the knife scraping quietly.
+	<<elseif $Act_01_RepeatCount is 3>>
+		Bread in. Bread out. Butter melts. She eats, but it tastes like nothing.
+	<<endif>>
 ->Get cereal & milk.
-	Lysandra pours cereal into a bowl, the sound of the pieces clattering against the ceramic oddly loud.
-	She adds milk, the liquid pooling around the edges.
-	She eats mechanically, the taste barely registering.
-	**The cereal is sweet, but the sweetness feels distant, as if it belongs to someone else’s morning.** 
-Lysandra sits at the table, her breakfast in front of her. 
-The TV flickers in the background, the news anchor’s voice a low murmur. 
-She stares at the screen, her mind drifting as the images blur together.
-**The news plays, a constant stream of tragedies and triumphs. But to Lysandra, it’s all noise—a reminder of a world that moves on, indifferent to her struggles.**
-...
+	<<if $Act_01_RepeatCount is 1>>
+		Lysandra pours cereal into a bowl, the sound of the pieces clattering against the ceramic oddly loud.
+		She adds milk, the liquid pooling around the edges.
+		She eats mechanically, the taste barely registering.
+		The cereal is sweet, but the sweetness feels distant, as if it belongs to someone else’s morning.
+	<<elseif $Act_01_RepeatCount is 2>>
+		Cereal clatters into the bowl. Milk splashes. She eats, the spoon moving without thought.
+	<<elseif $Act_01_RepeatCount is 3>>
+		Cereal. Milk. Spoon. The taste is gone before she notices.
+	<<endif>>
+<<if $Act_01_RepeatCount is 1>>
+	Lysandra sits at the table, her breakfast in front of her. 
+	The TV flickers in the background, the news anchor’s voice a low murmur. 
+	She stares at the screen, her mind drifting as the images blur together.
+	The news plays, a constant stream of tragedies and triumphs. But to Lysandra, it’s all noise—a reminder of a world that moves on, indifferent to her struggles.
+	Lysandra pushes the empty plate aside, the remnants of breakfast a silent testament to another meal eaten alone.
+	The TV continues to flicker, the news anchor’s voice a distant hum.
+	She sits for a moment, her gaze fixed on the screen but her thoughts elsewhere.
+	The day stretches ahead, a blank canvas waiting for her to make the first mark.
+	But the weight of routine presses down, and the choice feels heavier than it should.
+<<elseif $Act_01_RepeatCount is 2>>
+
+<<elseif $Act_01_RepeatCount is 3>>
+
+<<endif>>
 ->Work in office.
-	<<set $WorkInOffice = true>>
-	Lysandra grabs her bag and heads out the door. 
-	The streets are busy, the hum of traffic a dull roar.
-	She boards the bus, finding a seat by the window.
-	The ride is uneventful, the passing scenery a blur.
-	When she arrives at the office, she takes her place at her desk, logging into the company software with a sigh.
-	**The office is a maze of cubicles, each one a tiny world of its own. Lysandra’s desk is no different—a space filled with papers and half-finished tasks, a reflection of her fractured mind.**
-	<<jump EmailCheck>>
+	<<if $Act_01_RepeatCount is 1>>
+		<<set $WorkInOffice = true>>
+		Lysandra grabs her bag and heads out the door. 
+		The streets are busy, the hum of traffic a dull roar.
+		She boards the bus, finding a seat by the window.
+		The ride is uneventful, the passing scenery a blur.
+		When she arrives at the office, she takes her place at her desk, logging into the company software with a sigh.
+		The office is a maze of cubicles, each one a tiny world of its own. Lysandra’s desk is no different—a space filled with papers and half-finished tasks, a reflection of her fractured mind.
+		<<jump EmailCheck>>
+	<<elseif $Act_01_RepeatCount is 2>>
+		She steps onto the bus, the seats filled with silent strangers.
+		The city blurs past the window.
+		At her desk, she logs in, the screen glowing faintly.
+		<<jump EmailCheck>>
+	<<elseif $Act_01_RepeatCount is 3>>
+		Bus. Desk. Screen. The day passes, but she doesn’t notice.
+		<<jump EmailCheck>>
+	<<endif>>
 ->Work from home.
-	<<set $WorkFromHome = true>>
-	Lysandra settles onto the couch, her laptop open in front of her. 
-	The screen glows, casting a pale light on her face. 
-	She types slowly, her thoughts scattered.
-	**The apartment is quiet, the silence almost oppressive. But even here, the weight of her past follows her, a shadow she can’t escape.**
-	<<jump EmailCheck>>
+	<<if $Act_01_RepeatCount is 1>>
+		<<set $WorkFromHome = true>>
+		Lysandra settles onto the couch, her laptop open in front of her. 
+		The screen glows, casting a pale light on her face. 
+		She types slowly, her thoughts scattered.
+		The apartment is quiet, the silence almost oppressive. But even here, the weight of her past follows her, a shadow she can’t escape.
+		<<jump EmailCheck>>
+	<<elseif $Act_01_RepeatCount is 2>>
+		She opens the laptop, the screen’s glow filling the room.
+		Her fingers move across the keys, but the words feel hollow.
+		<<jump EmailCheck>>
+	<<elseif $Act_01_RepeatCount is 3>>
+		Laptop. Screen. Keys. The words blur together, meaningless.
+		<<jump EmailCheck>>
+	<<endif>>
 ===
 
 title: EmailCheck
 ---
 ->Check Emails.
-	Lysandra opens her inbox, scanning the messages. 
-	Most are mundane—meeting reminders, project updates. But one catches her eye, the subject line vague yet unsettling.
-	She hesitates, then closes the tab without opening it.
-	**The email sits unread, a small act of defiance. But even unopened, it lingers in her mind, a reminder of something she can’t quite name.**
-	<<jump LunchBreak>>
+	<<if $Act_01_RepeatCount is 1>>
+		Lysandra opens her inbox, scanning the messages. 
+		Most are mundane—meeting reminders, project updates. But one catches her eye, the subject line vague yet unsettling.
+		She hesitates, then closes the tab without opening it.
+		The email sits unread, a small act of defiance. But even unopened, it lingers in her mind, a reminder of something she can’t quite name.
+		<<jump LunchBreak>>
+	<<elseif $Act_01_RepeatCount is 2>>
+		She scans the inbox, her eyes skipping over the words.
+		One subject line stands out, but she closes the tab before reading it.
+		<<jump LunchBreak>>
+	<<elseif $Act_01_RepeatCount is 3>>
+		Inbox. Subject line. Tab closed. The email lingers, unread and unnamed.
+		<<jump LunchBreak>>
+	<<endif>>
 ->Dont Check Emails.
-	Lysandra ignores her inbox, focusing instead on her work. The screen blurs as she types, her thoughts drifting.
-	**The emails go unchecked, a small rebellion against the demands of the world. But even in ignoring them, she feels their weight.**
-	<<jump LunchBreak>>
+	<<if $Act_01_RepeatCount is 1>>
+		Lysandra ignores her inbox, focusing instead on her work. The screen blurs as she types, her thoughts drifting.
+		The emails go unchecked, a small rebellion against the demands of the world. But even in ignoring them, she feels their weight.
+		<<jump LunchBreak>>
+	<<elseif $Act_01_RepeatCount is 2>>
+		She types, the screen a blur. The inbox sits untouched, its notifications blinking faintly.
+		<<jump LunchBreak>>
+	<<elseif $Act_01_RepeatCount is 3>>
+		Screen. Keys. Notifications. The emails wait, heavy and unseen.
+		<<jump LunchBreak>>
+	<<endif>>
 ===
 
 title: LunchBreak
 ---
 <<if $WorkInOffice is true>>
 	->Have Lunch.
-		Lysandra grabs a pre-packaged sandwich from the cafeteria and returns to her desk. She eats in silence, the taste bland and unremarkable.
-		**The sandwich is dry, the flavors muted. It’s sustenance, nothing more—a reminder that even nourishment can feel empty.**
-		<<jump Livingroom_01>>
+		<<if $Act_01_RepeatCount is 1>>
+			Lysandra grabs a pre-packaged sandwich from the cafeteria and returns to her desk. She eats in silence, the taste bland and unremarkable.
+			The sandwich is dry, the flavors muted. It’s sustenance, nothing more—a reminder that even nourishment can feel empty.
+			<<jump Livingroom_01>>
+		<<elseif $Act_01_RepeatCount is 2>>
+			She unwraps the sandwich, the plastic crinkling softly. She eats, the taste barely registering.
+			<<jump Livingroom_01>>
+		<<elseif $Act_01_RepeatCount is 3>>
+			Sandwich. Desk. Silence. The food is gone, but the emptiness remains.
+			<<jump Livingroom_01>>
+		<<endif>>
 	->Skip Lunch.
-		Lysandra decides to skip lunch, the gnawing hunger a distant sensation. She continues working, the hours blending together.
-		**Lunch is skipped, the hunger ignored. But even in skipping it, she feels its absence—a void that grows with each passing moment.**
-		<<jump Livingroom_01>>
+		<<if $Act_01_RepeatCount is 1>>
+			Lysandra decides to skip lunch, the gnawing hunger a distant sensation. She continues working, the hours blending together.
+			Lunch is skipped, the hunger ignored. But even in skipping it, she feels its absence—a void that grows with each passing moment.
+			<<jump Livingroom_01>>
+		<<elseif $Act_01_RepeatCount is 2>>
+			She works through lunch, the hunger faint but persistent. The hours blur, the day stretching on.
+			<<jump Livingroom_01>>
+		<<elseif $Act_01_RepeatCount is 3>>
+			No lunch. No break. The hours pass, but the void remains.
+			<<jump Livingroom_01>>
+		<<endif>>
 <<elseif $WorkFromHome is true>>	
 	->Have Lunch
-		Lysandra reheats leftovers in the microwave, the smell filling the apartment. She eats on the couch, her laptop still open in front of her.
-		**The leftovers are warm, but the warmth is fleeting. Even food, a basic necessity, feels like a chore.**
-		<<jump Livingroom_01>>
+		<<if $Act_01_RepeatCount is 1>>
+			Lysandra reheats leftovers in the microwave, the smell filling the apartment. She eats on the couch, her laptop still open in front of her.
+			The leftovers are warm, but the warmth is fleeting. Even food, a basic necessity, feels like a chore.
+			<<jump Livingroom_01>>
+		<<elseif $Act_01_RepeatCount is 2>>
+			The microwave hums. She eats on the couch, the laptop’s glow filling the room.
+			<<jump Livingroom_01>>
+		<<elseif $Act_01_RepeatCount is 3>>
+			Leftovers. Microwave. Couch. The food is gone, but the effort lingers.
+			<<jump Livingroom_01>>
+		<<endif>>
 	->Skip Lunch
-		Lysandra decides to skip lunch, the gnawing hunger a distant sensation. She continues working, the hours blending together.
-		**Lunch is skipped, the hunger ignored. But even in skipping it, she feels its absence—a void that grows with each passing moment.**
-		<<jump Livingroom_01>>
+		<<if $Act_01_RepeatCount is 1>>
+			Lysandra decides to skip lunch, the gnawing hunger a distant sensation. She continues working, the hours blending together.
+			Lunch is skipped, the hunger ignored. But even in skipping it, she feels its absence—a void that grows with each passing moment.
+			<<jump Livingroom_01>>
+		<<elseif $Act_01_RepeatCount is 2>>
+			She works through lunch, the hunger faint but persistent. The hours blur, the day stretching on.
+			<<jump Livingroom_01>>
+		<<elseif $Act_01_RepeatCount is 3>>
+			No lunch. No break. The hours pass, but the void remains.
+			<<jump Livingroom_01>>
+		<<endif>>
 <<endif>>
 ===
 
 title: Livingroom_01
 ---
 <<if $WorkInOffice is true>>
-	After a long day, Lysandra heads home. The bus ride is quiet, the streets now empty. She arrives at her apartment, putting her bag down and stretching.
-	**The apartment welcomes her back, its familiarity a small comfort. But even here, the shadows linger, a reminder of what she’s lost.**
-	<<jump ChoiceTree_02>>
-<<elseif $WorkFromHome is true>>	
-	Lysandra closes her laptop, the screen going dark. She stands, stretching her stiff limbs.
-	**The work is done, but the weight remains. Even in stillness, the world feels heavy.**
-	<<jump ChoiceTree_02>>
+	<<if $Act_01_RepeatCount is 1>>
+		After a long day, Lysandra heads home. The bus ride is quiet, the streets now empty. She arrives at her apartment, putting her bag down and stretching.
+		The apartment welcomes her back, its familiarity a small comfort. But even here, the shadows linger, a reminder of what she’s lost.
+		<<jump ChoiceTree_02>>
+	<<elseif $Act_01_RepeatCount is 2>>
+		The bus ride is silent, the streets dark. She steps inside, the apartment quiet and still.
+		<<jump ChoiceTree_02>>
+	<<elseif $Act_01_RepeatCount is 3>>
+		Bus. Apartment. Shadows. The day ends, but the emptiness remains.
+		<<jump ChoiceTree_02>>
+	<<endif>>
+<<elseif $WorkFromHome is false>>
+	<<if $Act_01_RepeatCount is 1>>
+		Lysandra closes her laptop, the screen going dark. She stands, stretching her stiff limbs.
+		The work is done, but the weight remains. Even in stillness, the world feels heavy.
+		<<jump ChoiceTree_02>>
+	<<elseif $Act_01_RepeatCount is 2>>
+		The laptop closes, the room dimming. She stands, her body stiff and tired.
+		<<jump ChoiceTree_02>>
+	<<elseif $Act_01_RepeatCount is 3>>
+		Laptop. Stand. Stretch. The work is over, but the weight stays.
+		<<jump ChoiceTree_02>>
+	<<endif>>
 <<endif>>
 ===
 
 title: ChoiceTree_02
 ---
 <<if $CleanAbsolved is true and $LaundryAbsolved is true and $DishesAbsolved is true and $WaterPlantsAbsolved is true>>
-	<<set $Livingroom_01Unlocked = true>>
-<<elseif $Livingroom_01Unlocked is true>>
-	...
+	<<if $Act_01_RepeatCount is 1>>
+
 	<<jump Kitchen_01>>
+	<<elseif $Act_01_RepeatCount is 2>>
+
+	<<jump Kitchen_01>>
+	<<elseif $Act_01_RepeatCount is 3>>
+	
+	<<jump Kitchen_01>>
+	<<endif>>
 <<endif>>
 ->clean.
 	<<if $CleanAbsolved is false>>
-		Lysandra grabs a rag and begins wiping down the surfaces, the motion repetitive and soothing. She sweeps the floors, the dust swirling in the air before settling.
-		**Cleaning is a small act of control, a way to impose order on chaos. But even clean surfaces can’t erase the stains of the past.**
-		<<set $CleanAbsolved = true>>
-		<<jump ChoiceTree_02>>
+		<<if $Act_01_RepeatCount is 1>>
+			Lysandra grabs a rag and begins wiping down the surfaces, the motion repetitive and soothing. She sweeps the floors, the dust swirling in the air before settling.
+			Cleaning is a small act of control, a way to impose order on chaos. But even clean surfaces can’t erase the stains of the past.
+			<<set $CleanAbsolved = true>>
+			<<jump ChoiceTree_02>>
+		<<elseif $Act_01_RepeatCount is 2>>
+			She wipes the surfaces, the rag moving in slow circles. The dust rises, then falls, the room no cleaner than before.
+			<<set $CleanAbsolved = true>>
+			<<jump ChoiceTree_02>>
+		<<elseif $Act_01_RepeatCount is 3>>
+			Rag. Dust. Floors. The cleaning is done, but the stains remain.
+			<<set $CleanAbsolved = true>>
+			<<jump ChoiceTree_02>>
+		<<endif>>
 	<<elseif $CleanAbsolved is true>>
-		**There’s no need to do this again. Routine is repetition, but even she knows when to move on.**
-		<<jump ChoiceTree_02>>
+		<<if $Act_01_RepeatCount is 1>>
+			There’s no need to do this again. Routine is repetition, but even she knows when to move on.
+			<<jump ChoiceTree_02>>
+		<<elseif $Act_01_RepeatCount is 2>>
+			The routine repeats, but the meaning fades. She knows it’s time to move on, but the steps feel automatic.
+			<<jump ChoiceTree_02>>
+		<<elseif $Act_01_RepeatCount is 3>>
+			Repetition. Routine. Stagnation. The cycle tightens, but she doesn’t notice.
+			<<jump ChoiceTree_02>>
+		<<endif>>
 	<<endif>>
 ->Laundry.
 	<<if $LaundryAbsolved is false>>
-		Lysandra gathers her clothes, the fabric soft in her hands. She loads the washer, the sound of water filling the machine a comforting rhythm.
-		**Laundry is a cycle, endless and repetitive. But even in repetition, there’s a strange comfort—a reminder that some things can be made new again.**
-		<<set $LaundryAbsolved = true>>
-		<<jump ChoiceTree_02>>
+		<<if $Act_01_RepeatCount is 1>>
+			Lysandra gathers her clothes, the fabric soft in her hands. She loads the washer, the sound of water filling the machine a comforting rhythm.
+			Laundry is a cycle, endless and repetitive. But even in repetition, there’s a strange comfort—a reminder that some things can be made new again.
+			<<set $LaundryAbsolved = true>>
+			<<jump ChoiceTree_02>>
+		<<elseif $Act_01_RepeatCount is 2>>
+			She loads the washer, the water rushing in. The cycle begins, the hum of the machine filling the room.
+			<<set $LaundryAbsolved = true>>
+			<<jump ChoiceTree_02>>
+		<<elseif $Act_01_RepeatCount is 3>>
+			Clothes. Washer. Water. The cycle repeats, but the comfort fades.
+			<<set $LaundryAbsolved = true>>
+			<<jump ChoiceTree_02>>
+		<<endif>>
 	<<elseif $LaundryAbsolved is true>>
-		**There’s no need to do this again. Routine is repetition, but even she knows when to move on.**
-		<<jump ChoiceTree_02>>
+		<<if $Act_01_RepeatCount is 1>>
+			There’s no need to do this again. Routine is repetition, but even she knows when to move on.
+			<<jump ChoiceTree_02>>
+		<<elseif $Act_01_RepeatCount is 2>>
+			The routine repeats, but the meaning fades. She knows it’s time to move on, but the steps feel automatic.
+			<<jump ChoiceTree_02>>
+		<<elseif $Act_01_RepeatCount is 3>>
+			Repetition. Routine. Stagnation. The cycle tightens, but she doesn’t notice.
+			<<jump ChoiceTree_02>>
+		<<endif>>
 	<<endif>>
 ->Dishes.
 	<<if $DishesAbsolved is false>>
-		Lysandra fills the sink with soapy water, the bubbles rising to the surface. She scrubs the dishes, the water warm against her skin.
-		**Dishes are a mundane task, but there’s a quiet satisfaction in seeing them clean. Yet even clean dishes can’t wash away the residue of guilt.**
-		<<set $DishesAbsolved = true>>
-		<<jump ChoiceTree_02>>
+		<<if $Act_01_RepeatCount is 1>>
+			Lysandra fills the sink with soapy water, the bubbles rising to the surface. She scrubs the dishes, the water warm against her skin.
+			Dishes are a mundane task, but there’s a quiet satisfaction in seeing them clean. Yet even clean dishes can’t wash away the residue of guilt.
+			<<set $DishesAbsolved = true>>
+			<<jump ChoiceTree_02>>
+		<<elseif $Act_01_RepeatCount is 2>>
+			The sink fills with soapy water. She scrubs, the dishes clinking softly. The water drains, but the guilt remains.
+			<<set $DishesAbsolved = true>>
+			<<jump ChoiceTree_02>>
+		<<elseif $Act_01_RepeatCount is 3>>
+			Sink. Dishes. Water. The task is done, but the guilt lingers.
+			<<set $DishesAbsolved = true>>
+			<<jump ChoiceTree_02>>
+		<<endif>>
 	<<elseif $DishesAbsolved is true>>
-		**There’s no need to do this again. Routine is repetition, but even she knows when to move on.**
-		<<jump ChoiceTree_02>>
+		<<if $Act_01_RepeatCount is 1>>
+			There’s no need to do this again. Routine is repetition, but even she knows when to move on.
+			<<jump ChoiceTree_02>>
+		<<elseif $Act_01_RepeatCount is 2>>
+			The routine repeats, but the meaning fades. She knows it’s time to move on, but the steps feel automatic.
+			<<jump ChoiceTree_02>>
+		<<elseif $Act_01_RepeatCount is 3>>
+			Repetition. Routine. Stagnation. The cycle tightens, but she doesn’t notice.
+			<<jump ChoiceTree_02>>
+		<<endif>>
 	<<endif>>
 ->Water plants.
 	<<if $WaterPlantsAbsolved is false>>
-		Lysandra moves from plant to plant, the water trickling into the soil. The leaves glisten in the light, a small sign of life.
-		**Plants need care to thrive, a reminder that even the smallest acts can sustain life. But even thriving plants can’t fill the emptiness inside.**
-		<<set $WaterPlantsAbsolved = true>>
-		<<jump ChoiceTree_02>>
+		<<if $Act_01_RepeatCount is 1>>
+			Lysandra moves from plant to plant, the water trickling into the soil. The leaves glisten in the light, a small sign of life.
+			Plants need care to thrive, a reminder that even the smallest acts can sustain life. But even thriving plants can’t fill the emptiness inside.
+			<<set $WaterPlantsAbsolved = true>>
+			<<jump ChoiceTree_02>>
+		<<elseif $Act_01_RepeatCount is 2>>
+			She waters the plants, the soil darkening as the water seeps in. The leaves glisten, but the emptiness remains.
+			<<set $WaterPlantsAbsolved = true>>
+			<<jump ChoiceTree_02>>
+		<<elseif $Act_01_RepeatCount is 3>>
+			Water. Soil. Leaves. The plants thrive, but the void stays.
+			<<set $WaterPlantsAbsolved = true>>
+			<<jump ChoiceTree_02>>
+		<<endif>>
 	<<elseif $WaterPlantsAbsolved is true>>
-		**There’s no need to do this again. Routine is repetition, but even she knows when to move on.**
-		<<jump ChoiceTree_02>>
+		<<if $Act_01_RepeatCount is 1>>
+			There’s no need to do this again. Routine is repetition, but even she knows when to move on.
+			<<jump ChoiceTree_02>>
+		<<elseif $Act_01_RepeatCount is 2>>
+			The routine repeats, but the meaning fades. She knows it’s time to move on, but the steps feel automatic.
+			<<jump ChoiceTree_02>>
+		<<elseif $Act_01_RepeatCount is 3>>
+			Repetition. Routine. Stagnation. The cycle tightens, but she doesn’t notice.
+			<<jump ChoiceTree_02>>
+		<<endif>>
 	<<endif>>
 ===
 
 title: Kitchen_01
 ---
 ->Order takeout.
-	Lysandra opens her phone, scrolling through the options. 
-	She places an order, the act feeling distant and impersonal. 
-	When the food arrives, she eats in silence, the flavors muted.
-	**Takeout is convenient, but convenience comes at a cost. Even food delivered to her door feels like a reminder of her isolation.**
+	<<if $Act_01_RepeatCount is 1>>
+		Lysandra opens her phone, scrolling through the options. 
+		She places an order, the act feeling distant and impersonal. 
+		When the food arrives, she eats in silence, the flavors muted.
+		Takeout is convenient, but convenience comes at a cost. Even food delivered to her door feels like a reminder of her isolation.
+	<<elseif $Act_01_RepeatCount is 2>>
+		She orders, the phone screen glowing faintly. The food arrives, but the flavors barely register.
+	<<elseif $Act_01_RepeatCount is 3>>
+		Phone. Order. Food. The meal is eaten, but the isolation remains.
+	<<endif>>
 ->Cook.
-	Lysandra rummages through the fridge, finding a few ingredients. 
-	She cooks a simple meal, the act of chopping and stirring a small distraction.
-	**Cooking is an act of creation, but even creation can feel hollow when the world feels so broken.**
-...
+	<<if $Act_01_RepeatCount is 1>>
+		Lysandra rummages through the fridge, finding a few ingredients. 
+		She cooks a simple meal, the act of chopping and stirring a small distraction.
+		Cooking is an act of creation, but even creation can feel hollow when the world feels so broken.
+	<<elseif $Act_01_RepeatCount is 2>>
+		She chops, the knife tapping against the cutting board. The stove hums, but the meal feels empty.
+	<<elseif $Act_01_RepeatCount is 3>>
+		Knife. Stove. Meal. The food is made, but the hollowness stays.
+	<<endif>>
+<<if $Act_01_RepeatCount is 1>>
+
+<<elseif $Act_01_RepeatCount is 2>>
+
+<<elseif $Act_01_RepeatCount is 3>>
+
+<<endif>>
 ->Watch TV.
-	Lysandra turns on the TV, the screen flickering to life. 
-	The shows are familiar, their plots predictable.
-	She watches without really seeing, the images blending together.
-	**TV is a distraction, but even distractions can’t drown out the noise in her mind**
+	<<if $Act_01_RepeatCount is 1>>
+		Lysandra turns on the TV, the screen flickering to life. 
+		The shows are familiar, their plots predictable.
+		She watches without really seeing, the images blending together.
+		TV is a distraction, but even distractions can’t drown out the noise in her mind
+	<<elseif $Act_01_RepeatCount is 2>>
+		The TV flickers, the shows playing in the background. She stares, but the images blur together.
+	<<elseif $Act_01_RepeatCount is 3>>
+		TV. Screen. Noise. The shows play, but the noise remains.
+	<<endif>>
 ->Scroll on Phone.
-	Lysandra opens her phone, scrolling through social media.
-	The posts are endless, a stream of lives that feel distant and unreal.
-	**Social media is a window into other lives, but even those lives feel like illusions—a reminder of how disconnected she feels.**
-...
+	<<if $Act_01_RepeatCount is 1>>
+		Lysandra opens her phone, scrolling through social media.
+		The posts are endless, a stream of lives that feel distant and unreal.
+		Social media is a window into other lives, but even those lives feel like illusions—a reminder of how disconnected she feels.
+	<<elseif $Act_01_RepeatCount is 2>>
+		She scrolls, the posts blurring together. The lives on the screen feel distant, unreal.
+	<<elseif $Act_01_RepeatCount is 3>>
+		Phone. Posts. Lives. The screen glows, but the disconnection stays.
+	<<endif>>
+<<if $Act_01_RepeatCount is 1>>
+
 <<set $BrushTeethAbsolved = false>>
 <<jump Bathroom_02>>
+<<elseif $Act_01_RepeatCount is 2>>
+
+<<set $BrushTeethAbsolved = false>>
+<<jump Bathroom_02>>
+<<elseif $Act_01_RepeatCount is 3>>
+
+<<set $BrushTeethAbsolved = false>>
+<<jump Bathroom_02>>
+<<endif>>
 ===
 
 title: Bathroom_02
 ---
 <<if $ChangeAbsolved is true and $BrushTeethAbsolved is true>>
-	<<set $Bathroom_02Unlocked = true>>
-<<elseif $Bathroom_02Unlocked is true>>
-	...
+	<<if $Act_01_RepeatCount is 1>>
+
 	<<jump Bedroom_01>>
+	<<elseif $Act_01_RepeatCount is 2>>
+
+	<<jump Bedroom_01>>
+	<<elseif $Act_01_RepeatCount is 3>>
+
+	<<jump Bedroom_01>>
+	<<endif>>
 <<endif>>
 ->Change.
 	<<if $ChangeAbsolved is false>>
-		Lysandra heads to the bedroom, pulling on her pajamas. The fabric is soft, but the comfort feels fleeting.
-		**Pajamas are a small comfort, but even comfort can’t shield her from the dreams that await.**
-		<<set $ChangeAbsolved = true>>
-		<<jump Bathroom_02>>
+		<<if $Act_01_RepeatCount is 1>>
+			Lysandra heads to the bedroom, pulling on her pajamas. The fabric is soft, but the comfort feels fleeting.
+			Pajamas are a small comfort, but even comfort can’t shield her from the dreams that await.
+			<<set $ChangeAbsolved = true>>
+			<<jump Bathroom_02>>
+		<<elseif $Act_01_RepeatCount is 2>>
+			She pulls on the pajamas, the fabric soft against her skin. The comfort fades as the night deepens.
+			<<set $ChangeAbsolved = true>>
+			<<jump Bathroom_02>>
+		<<elseif $Act_01_RepeatCount is 3>>
+			Pajamas. Bed. Dreams. The comfort is gone before she notices.
+			<<set $ChangeAbsolved = true>>
+			<<jump Bathroom_02>>
+		<<endif>>
 	<<elseif $ChangeAbsolved is false>>
-		**There’s no need to do this again. Routine is repetition, but even she knows when to move on.**
-		<<jump Bathroom_02>>
+		<<if $Act_01_RepeatCount is 1>>
+			There’s no need to do this again. Routine is repetition, but even she knows when to move on.
+			<<jump Bathroom_02>>
+		<<elseif $Act_01_RepeatCount is 2>>
+			The routine repeats, but the meaning fades. She knows it’s time to move on, but the steps feel automatic.
+			<<jump Bathroom_02>>
+		<<elseif $Act_01_RepeatCount is 3>>
+			Repetition. Routine. Stagnation. The cycle tightens, but she doesn’t notice.
+			<<jump Bathroom_02>>
+		<<endif>>
 	<<endif>>
 ->Brush teeth.
 	<<if $BrushTeethAbsolved is false>>
-		Lysandra stands at the sink, brushing her teeth. The minty taste is sharp, a small jolt to her senses.
-		**Brushing her teeth is a routine, but even routines can’t erase the bitterness of the day.**
-		<<set $BrushTeethAbsolved = true>>
-		<<jump Bathroom_02>>
+		<<if $Act_01_RepeatCount is 1>>
+			Lysandra stands at the sink, brushing her teeth. The minty taste is sharp, a small jolt to her senses.
+			Brushing her teeth is a routine, but even routines can’t erase the bitterness of the day.
+			<<set $BrushTeethAbsolved = true>>
+			<<jump Bathroom_02>>
+		<<elseif $Act_01_RepeatCount is 2>>
+			She brushes, the mint sharp at first, then fading. The sink fills with foam, then drains.
+			<<set $BrushTeethAbsolved = true>>
+			<<jump Bathroom_02>>
+		<<elseif $Act_01_RepeatCount is 3>>
+			Brush. Rinse. Spit. The mint is gone before she notices.
+			<<set $BrushTeethAbsolved = true>>
+			<<jump Bathroom_02>>
+		<<endif>>
 	<<elseif $BrushTeethAbsolved is true>>
-		**There’s no need to do this again. Routine is repetition, but even she knows when to move on.**
-		<<jump Bathroom_02>>
+		<<if $Act_01_RepeatCount is 1>>
+			There’s no need to do this again. Routine is repetition, but even she knows when to move on.
+			<<jump Bathroom_02>>
+		<<elseif $Act_01_RepeatCount is 2>>
+			The routine repeats, but the meaning fades. She knows it’s time to move on, but the steps feel automatic.
+		<<elseif $Act_01_RepeatCount is 3>>
+			Repetition. Routine. Stagnation. The cycle tightens, but she doesn’t notice.
+		<<endif>>
 	<<endif>>
 ===
 
 title: Bedroom_01
 ---
-<<if $Act_01_RepeatCount >= 3>>
-	...
+<<set $randomValue = random() * 100>>
+<<if $Act_01_RepeatCount is 2>>
+	<<set $randomValue = $randomValue + 25>>
+<<elseif $Act_01_RepeatCount is 3>>
+	<<set $randomValue = $randomValue + 25>>
+<<endif>>
+<<if $randomValue >= $BaseSuccessRate>>
+	<<if $Act_01_RepeatCount is 1>>
+
+	<<elseif $Act_01_RepeatCount is 2>>
+
+	<<elseif $Act_01_RepeatCount is 3>>
+
+	<<endif>>
 	->Open.
 		Lysandra hesitates, then opens the letter.
 		(Dr. Lysandra Aerterna, did you think you could bury the past? Lock it away in the ruins, let time swallow the truth? Time is not what you believe it to be. It was never linear, never fixed. You of all people should know that. You built the door.You opened it. And now, the echoes remain. They are waiting for you. She is waiting for you. *distorted Sentence* The past is not a prison. It is a puzzle. Do not let them rewrite it. Find me before they do.)
 		Her heart races as she reads, the words stirring something deep within her.
-		**The letter is a crack in the facade, a glimpse of something beyond the monotony. But even cracks can lead to deeper fractures.**
+		The letter is a crack in the facade, a glimpse of something beyond the monotony. But even cracks can lead to deeper fractures.
 		<<jump Act_02>>
 	->Do not.s
 		Lysandra tosses the letter aside, dismissing it as spam. She heads to bed, the letter forgotten.
-		**The letter is ignored, its secrets left unread. But even in ignoring it, she feels its presence—a shadow she can’t quite shake.**
+		The letter is ignored, its secrets left unread. But even in ignoring it, she feels its presence—a shadow she can’t quite shake.
 		<<jump Ending_01>>
-<<else>>
-...
-<<jump RepeatRoutine_01>>
+<<elseif $randomValue <= $BaseSuccesRate>>
+	<<if $Act_01_RepeatCount is 3>>
+		<<jump Ending_02>>
+	<<endif>>
+	<<if $Act_01_RepeatCount is 1>>
+
+	<<jump RepeatRoutine_01>>
+	<<elseif $Act_01_RepeatCount is 2>>
+	
+	<<jump RepeatRoutine_01>>
+	<<endif>>
 <<endif>>
 ===
 
@@ -367,32 +782,52 @@ title: Ending_01
 Lysandra stands in her apartment, the letter still lying on the floor where she tossed it. 
 The room is quiet, the only sound the faint hum of the refrigerator. 
 She glances at the letter, her expression unreadable. For a moment, it seems like she might pick it up—but then she turns away, heading to bed.
-**The letter lies forgotten, its secrets buried beneath the weight of routine. For Lysandra, it’s easier to ignore the cracks than to face what lies beyond them.**
+The letter lies forgotten, its secrets buried beneath the weight of routine. For Lysandra, it’s easier to ignore the cracks than to face what lies beyond them.
 She climbs into bed, the sheets cool against her skin.
 Her cluttered desk, the half drunken cups of coffee illuminated by the faint glow of her phone resting on the nightstand next to her bed, are a familiar sight to her, that gives her comfort and lets her drift to sleep sloftly.
-**Routine is a shield, a way to keep the world at bay. But even shields can’t protect her from the dreams that come in the quiet hours of the night.**
+Routine is a shield, a way to keep the world at bay. But even shields can’t protect her from the dreams that come in the quiet hours of the night.
 (As Lysandra drifts off to sleep, the screen fades to black. Slowly, images begin to form—fragments of memories, distorted and surreal. She sees the research facility, the explosion, the faces of her colleagues. Dr. Clair’s face appears, her expression sad but understanding.)
-**In her dreams, the past is alive, a fractured mosaic of what once was. The faces of those she lost flicker in and out of focus, their voices echoing in the void.**
+In her dreams, the past is alive, a fractured mosaic of what once was. The faces of those she lost flicker in and out of focus, their voices echoing in the void.
 The alarm rings, sharp and insistent. 
 Lysandra wakes up, her movements sluggish as she reaches for her phone. 
 (The screen fades in, revealing the same bedroom, the same cluttered desk, the same half-drunk cups of coffee.)
-**Another day begins, the cycle unbroken. The world outside moves on, indifferent to her struggles. But for Lysandra, time feels stagnant, a loop she can’t escape.**
+Another day begins, the cycle unbroken. The world outside moves on, indifferent to her struggles. 
+But for Lysandra, time feels stagnant, a loop she can’t escape.
 ->Turn off.
 	The alarm rings, sharp and insistent. Lysandra stirs, her hand fumbling for the phone. She silences it with a swipe, the screen going dark.
-	**The alarm stops, but the silence that follows is heavier. Another day begins, indistinguishable from the last.**
+	The alarm stops, but the silence that follows is heavier. Another day begins, indistinguishable from the last.
 ->Leave it.
 	The alarm rings, sharp and insistent. Lysandra buries her face in the pillow, letting it blare. After a moment, she reaches out and silences it, her movements slow and reluctant.
-	**The alarm fades, but its echo lingers. Even in resistance, she yields to the inevitable.**
-**Choices are made, but they feel hollow. Each action is a repetition, a reminder that even the smallest decisions can’t change the inevitable.**
+	The alarm fades, but its echo lingers. Even in resistance, she yields to the inevitable.
+Choices are made, but they feel hollow. Each action is a repetition, a reminder that even the smallest decisions can’t change the inevitable.
 As Lysandra goes about her day, the letter reappears in different places—on the kitchen counter, on her desk, on the couch. Each time, she ignores it, tossing it aside or leaving it where it lies.
-**The letter is a constant, a reminder of what she refuses to face. But even in ignoring it, she feels its presence—a shadow that grows with each passing day.**
-(The screen fades to black. The images of Lysandra’s routine play in a montage, each action blending into the next.)
-**Days turn into weeks, weeks into months. The routine continues, unbroken and unchanging. The letter remains unopened, its secrets buried. And so, Lysandra remains trapped in the eternal cycle, a prisoner of her own making.**
-(The screen shows glimpses of alternate timelines—Lysandra opening the letter, reading it, setting off on her journey. But these images are fleeting, like shards of glass reflecting a world she can’t reach.)
-**In another time, another place, she might have chosen differently. But here, in this fractured reality, the cycle continues. The past, present, and future blur together, a reminder that even time itself is not immune to impermanence.**
-(The screen fades to a single image: the letter, lying on the floor of Lysandra’s apartment. The camera zooms in slowly, the edges of the screen blurring as the narrator’s voice fades into silence.)
-**And so, the letter remains—a symbol of what could have been, a reminder of what was lost. But for Lysandra, it’s easier to stay in the cycle than to face the unknown.**
-(The screen fades to black, and the words "The Eternal Cycle" appear in white text. Below it, a brief description: Lysandra chose to remain in the cycle, her life a repetition of routines and regrets. The letter’s secrets were left unread, its mysteries buried beneath the weight of time. In the end, she found comfort in the familiar, even as the world moved on without her.)
+The letter is a constant, a reminder of what she refuses to face. But even in ignoring it, she feels its presence—a shadow that grows with each passing day.
+(Screen fades to black. The images of Lysandra’s routine play in a montage, each action blending into the next.)
+Days turn into weeks, weeks into months. The routine continues, unbroken and unchanging. The letter remains unopened, its secrets buried. And so, Lysandra remains trapped in the eternal cycle, a prisoner of her own making.
+(Screen shows glimpses of alternate timelines—Lysandra opening the letter, reading it, setting off on her journey. But these images are fleeting, like shards of glass reflecting a world she can’t reach.)
+In another time, another place, she might have chosen differently. But here, in this fractured reality, the cycle continues. The past, present, and future blur together, a reminder that even time itself is not immune to impermanence.
+(Screen fades to a single image: the letter, lying on the floor of Lysandra’s apartment. The camera zooms in slowly, the edges of the screen blurring as the narrator’s voice fades into silence.)
+And so, the letter remains—a symbol of what could have been, a reminder of what was lost. But for Lysandra, it’s easier to stay in the cycle than to face the unknown.
+(Screen fades to black, and the words "The Eternal Cycle" appear in white text. Below it, a brief description: Lysandra chose to remain in the cycle, her life a repetition of routines and regrets. The letter’s secrets were left unread, its mysteries buried beneath the weight of time. In the end, she found comfort in the familiar, even as the world moved on without her.)
 -Gongratulations! You reached the first ending "The Eternal Cycle"
+Thank you for playing, I hope you enjoyed yourself :)
+===
+
+title: Ending_02
+---
+Choices blur together, indistinguishable from the days that pass. 
+The sun rises, the sun sets. Lysandra moves through it all, unseeing, unchanging.
+The apartment shifts in imperceptible ways. A layer of dust thickens over forgotten objects. A wilted plant leans toward the window, searching for light that never comes. The static on the television deepens, distorting familiar voices into something unrecognizable.
+The cracks are there, but she does not see them. 
+The world is shifting beneath her feet, yet she does not stumble. 
+In another time, in another place, she might have noticed.
+Here, she simply continues.
+(The camera lingers on the letter—not in her hands, not even in her sight. It was never found, never read. A whisper of a possibility that never came to be. In the montage of her life, it does not exist.)
+The routine persists. The coffee grows colder. The mirrors reflect hollower eyes. The world outside changes, but she does not. 
+Lysandra becomes a monument to stillness, to a choice she never knew she had.
+(A final image: Lysandra, standing in front of the mirror. Her reflection is not quite her own. A crack runs through the glass, bisecting her face. She does not react.)
+Some stories are never told. Some doors are never opened. Some truths remain buried beneath the weight of time.
+Lysandra never found the letter. The cycle remained unbroken. The fractures in time widened, unseen, unheard. And so, she remained—a quiet echo in a world unraveling around her.
+-Gongratulations! You reached the second ending "The Unseen Fracture"
 Thank you for playing, I hope you enjoyed yourself :)
 ===
