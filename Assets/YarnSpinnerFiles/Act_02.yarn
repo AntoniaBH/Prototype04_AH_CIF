@@ -8,6 +8,7 @@ tags:
 <<set $QuickShowerAbsolved = false>>
 <<declare $ChosenToast = false>>
 <<declare $ChosenCereal = false>>
+<<declare $WorkChosen = false>>
 The letter lingers in her hands, its words pressing into her mind like an echo she can’t quite silence.
 A prank. It has to be.
 Her fingers tighten around the paper before she turns, crosses the room, and drops it into the trash without a second glance. The lid swings shut with a quiet finality.
@@ -224,6 +225,7 @@ The apartment, once a refuge, now feels like a prison, its walls closing in with
 	She grabs her bag and heads for the door, determined to find her keys at the office.
 	The office offers escape, a change of scenery.
 	And there too, the shadows of her morning linger, waiting to be confronted.
+	<<set $WorkChosen = true>>
 	<<jump Office_01>> 
 ->"...have to be here..."
 	Lysandra pauses, her frustration giving way to resignation.
@@ -285,32 +287,269 @@ The co-worker places a hand on her shoulder, their concern evident.
 Co-worker 2 (worried):"Maybe you should go home and rest. You look exhausted."
 Lysandra nods absentmindedly, her mind reeling.
 Lysandra (quietly):"Yeah... maybe you’re right."
+She gathers her belongings absentmindly. Somehow finding her desk as if she always new where it was and makes her way home.
+Once she enters the train, the sleepless nights cathc up to her and her eyes feeling like heavy weights are hanging from them fall shut just for a moment.
 <<jump Home_02>>
 ===
 
 title: Home_01
 ---
-...
+Lysandra collapses onto the couch, her eyes scanning the chaos she’s created in her search for the keys. 
+The living room is a mess—pillows thrown aside, papers scattered across the floor, her bag upturned in the hallway.
+The chaos is a mirror of her mind, a reflection of the fractures spreading through her reality. 
+Even the familiar feels foreign, the known slipping through her fingers like sand.
+She takes a deep breath, trying to ground herself. The weight of the morning presses down on her, but she pushes it aside, opening her laptop and forcing herself to focus.
+Work is a distraction, a way to impose order on the chaos.
+Distractions have their limits, and the cracks in her reality are growing harder to ignore.
+As Lysandra types, her mind drifts back to the mysterious letter. 
+The cryptic message lingers in her thoughts, its words echoing like a half-remembered dream.
+Lysandra (thinking):"I do not understand what this is about. After all this time, It cant be."
+She shakes her head, trying to push the thoughts away, but they refuse to be ignored.
+Lysandra pushes herself up from the couch, her mind too scattered to focus. 
+She walks to the window, hoping a breath of fresh air will clear her thoughts.
+The window is a threshold, a place where the inside meets the outside. 
+She opens the window, the cool air rushing in. 
+As she looks out, her breath catches in her throat. The neighborhood looks... different.
+The streets are the same, the buildings familiar, but something feels off—an eerie, unshakable sense of wrongness.
+Lysandra (muttering):"What is it? What’s different?"
+She can’t pinpoint the change, but it’s there, lurking just beneath the surface.
+The familiar becomes unfamiliar, the known becomes unknown.
+She closes the window, trying to shake the feeling, but as she turns around, her heart skips a beat.
+The living room is different—the furniture rearranged, the decorations changed, her favorite books and blanket gone.
+Lysandra stares, her mind reeling.
+Lysandra (whispering):"This... this can’t be real. What’s happening?"
+She sits on the couch, her hands trembling. 
+As she looks around, she notices the room has grown dark. 
+She glances at her phone, her breath catching in her throat.
+Lysandra (alarmed):
+"8 PM? How is that possible? It was just 2 PM..."
+Before she can process the time jump, her phone rings.
+The caller ID shows her boss’s name. 
+She hesitates, then answers.
+Boss:"Ms. Aerterna, where are you? You weren’t in the office today."
+Lysandra (anxious):"I... I lost my keys. I’m waiting for the landlord to replace them so I do not lock myself out."
+Boss (pausing):"Lysandra, this is the third time this month. Are you okay?"
+Lysandra (stunned):"Third time? What are you talking about? This is the first time I’ve lost my keys."
+Boss (concerned):"Lysandra, you’ve been forgetting things a lot lately. We’re worried about you. Maybe you should take a few days off to rest."
+Lysandra’s mind races, her grip on reality slipping.
+Lysandra (quietly):"I... I don’t understand."
+Boss (softly):"Take care of yourself, okay? We’ll see you in a couple of days."
+The call ends, leaving Lysandra in stunned silence.
+Time is fluid, but memories are not. Or are they?
+Lysandra falls down onto her couch, closes her eyes and takes a deep breath.
+Her mind racing as she tries to make sense of the day’s events. 
 <<jump Home_02>>
 ===
 
 title: Home_02
 ---
-...
+Reality is a fragile thing, its edges fraying with each passing moment.
+She opens her eyes and finds herself sitting on the couch in her livingroom.
+The cracks are growing wider, and Lysandra is teetering on the edge of something she can’t yet understand.
+Suddenly, her phone buzzes. A notification lights up the screen: New Email.
+The email is a lifeline, a thread of clarity in the chaos.
+She opens the email, her eyes scanning the cryptic message.
+(Look beyond the lines of what is read. The answers are there, hidden in the details only you would know. Why does everything feel so off today? Why does time slip through your fingers? Find the truth before it finds you.)
+Lysandra’s breath catches in her throat. 
+The emails mentions details only she could know-the missing keys, the altered room, the jump in time.
+Lysandra (whispering):"How... how do they know? Who is this?"
+A shiver runs down her spine, the feeling of being watched pressing in on her from all sides.
+Lysandra jumps up from the couch, her heart pounding. 
+She hurries to close the blinds and window coverings, her movements frantic.
+The apartment, once a refuge, now feels like a prison.
+The walls offer no comfort, only the illusion of safety.
+She pulls the additional lock on the front door, the metallic click doing little to ease her growing fear.
+Lysandra (thinking):"I need to see that letter again. There has to be something to make this stop."
+Lysandra rushes to the trash can, her hands trembling as she pulls it open. 
+But the letter isn’t there.
+She empties the bin onto the floor, rummaging through the contents with increasing desperation.
+The letter is gone, its absence a cruel twist in a day already unraveling.
+But absence is not emptiness—it is a void, waiting to be filled.
+She sits back on her heels, defeated.
+Lysandra (muttering):"Where is it? I know I put it here..."
+She puts everything back in the bin, her movements slow and mechanical.
+She washes her hands, the water cold against her skin, and makes her way back to the living room.
+As Lysandra steps into the hallway and freezes-the letter is there, lying neatly in front of the closed door, as if it had never been touched.
+It mocks her, defying logic and reason.
+Lysandras heart pounds.
+Lysandra (shocked):"How... how did it get here? The door was locked. The windows were closed. This... this isn’t possible."
+She approaches the letter slowly, her hand shaking as she reaches out to pick it up.
+The paper feels warm, almost alive, in her hands.
+Lysandra clutches the letter to her chest, her mind racing.
+She hurries to the bedroom, her footsteps echoing in the silent apartment.
+She closes the door behind her, the click of the lock offering a small sense of security.
+The bedroom is a sanctuary, a place where the chaos of the world can’t reach her.
+She sits on the edge of the bed, the letter in her hands.
+Her breath comes in short, shallow gasps as she stares at the envelope, her name written in that same elegant, unfamiliar handwriting.
+lysandra (thinking):"What is this? What do you want from me?"
+Ping! Another email arrived in her mailbox.
 ->Open it.
-	...
+	Lysandra stares at the letter in her hands, her heart pounding. The email’s words echo in her mind: "Look beyond the lines of what is read."
+	 To open it is to step into the unknown, but to ignore it is to remain trapped in the cycle.
+	She takes a deep breath and opens the letter. The contents are the same as before—
+	(Dr. Lysandra Aerterna, did you think you could bury the past? Lock it away in the ruins, let time swallow the truth? Time is not what you believe it to be. It was never linear, never fixed. You of all people should know that. You built the door.You opened it. And now, the echoes remain. They are waiting for you. She is waiting for you. F̸̥̪̻͎̩̣̰̚ȯ̶͍͔̇̀̋l̵̢͔͕̼̖̠̫̼̮̲͉̭͊̅́̄̔̊̔͋͜͜ͅl̴̩̬̮̼̞̤̦͋̉̂̅̓̃͠ơ̴̙͇͚͚͚̞͔̽̿͋̊̈̔͌̏̕͜w̵̬͓̗̥̿̿̒̂͋̒͑̉́͠͝ ̵̡̯̙̩̟̘̪͙͎̮̞͎̥͐͒̈́̿̒̎̾̔̅́̐̉͆̕t̴̼̲̜̟̍͊́͂̾̕͝ͅh̸̨̡̼̮̯͙̱͖͍͖͕́̀̉͋̿͋̈́̒͌̍̃͠͠͠ͅȩ̶̧̘̬̟̜̯̟͈̤̩͈͎͖̞̈́̓̾̈́̑͘ ̵̡̼̘͚̙̝͖̝͙̥̜̤͕̅̓̉͊̌̔̿͒̚͜f̶̛̳̯̅̀̌̉͐̈̈́̈̉̒̕͝͝ͅr̸̺̾͐̓̂̾͆͂͛̿̚à̶̇̋͆̓͑͜ç̶̢͚̗̯̳͇̹͇̮͙͓̱̠̌̅́͆͊̀̎͒̂̈̐͗̿̚t̵̨̢̞̖̤͈̹̙͎̳̣̣̰͉̀̿̐͆͋̀͂͋u̷̢̝̓̽̐͊̓̏̍r̶̨̛̠̩͚̞̞̖̗̞̝̤̬̰̰̲̓e̷̢̢̡̳̗̩̭̺͈̰͐̍̌̌s̵̢̢͎̞̙̭̤̣̮̝̜̉́̽̊͋̇̿̈́͂̒͒̄͛͘͝. The past is not a prison. It is a puzzle. Do not let them rewrite it. Find me before they do.)
+	Lysandra (whispering):"Why? What does this mean? Is someone playing some kind of sick game with me?"
+	Her frustration grows, mingling with a creeping sense of dread.
 ->Do not open it.
-	...
-...
+	Lysandra hesitates, her hand trembling as she holds the letter. The fear is too much—she can’t bring herself to open it.
+	Fear is a prison, its walls closing in with each passing moment. But even in refusing to act, the choice is made for her.
+	Suddenly, her phone buzzes. Another email. She opens it, her breath catching as she reads the message.
+	"Open it."
+	She looks down at the letter in her hand—it’s already open. The same text as before stares back at her, its words unchanged.
+	Lysandra (panicking):"I didn’t open it... how did this happen?"
+	She throws the letter to the other end of the room, her breath coming in short, panicked gasps. 
+	She crawls backward on the bed, her back pressing against the headboard as she tries to calm herself.
+	Reality bends, its rules no longer apply. The letter is a force, its will stronger than her own."
+Lysandra sits frozen, her mind racing, when her phone buzzes again. Another email.
+Lysandra:"What the fuck is happening?"
 ->Open it.
-	...
+	Reluctantly, she opens the email. The message is simple.
+	"Read it."
 ->Do not open it.
-	...
-...
+	Before she can decide, her phone unlocks itself, the screen glowing as the email opens on its own. The message is the same.	
+	"Read it."
+Lysandra stares at the email, her frustration and fear mounting. 
+She picks up the letter again, her hands trembling as she reads the contents once more.
+(Dr. Lysandra Aerterna, did you think you could bury the past? Lock it away in the ruins, let time swallow the truth? Time is not what you believe it to be. It was never linear, never fixed. You of all people should know that. You built the door.You opened it. And now, the echoes remain. They are waiting for you. She is waiting for you. F̸̥̪̻͎̩̣̰̚ȯ̶͍͔̇̀̋l̵̢͔͕̼̖̠̫̼̮̲͉̭͊̅́̄̔̊̔͋͜͜ͅl̴̩̬̮̼̞̤̦͋̉̂̅̓̃͠ơ̴̙͇͚͚͚̞͔̽̿͋̊̈̔͌̏̕͜w̵̬͓̗̥̿̿̒̂͋̒͑̉́͠͝ ̵̡̯̙̩̟̘̪͙͎̮̞͎̥͐͒̈́̿̒̎̾̔̅́̐̉͆̕t̴̼̲̜̟̍͊́͂̾̕͝ͅh̸̨̡̼̮̯͙̱͖͍͖͕́̀̉͋̿͋̈́̒͌̍̃͠͠͠ͅȩ̶̧̘̬̟̜̯̟͈̤̩͈͎͖̞̈́̓̾̈́̑͘ ̵̡̼̘͚̙̝͖̝͙̥̜̤͕̅̓̉͊̌̔̿͒̚͜f̶̛̳̯̅̀̌̉͐̈̈́̈̉̒̕͝͝ͅr̸̺̾͐̓̂̾͆͂͛̿̚à̶̇̋͆̓͑͜ç̶̢͚̗̯̳͇̹͇̮͙͓̱̠̌̅́͆͊̀̎͒̂̈̐͗̿̚t̵̨̢̞̖̤͈̹̙͎̳̣̣̰͉̀̿̐͆͋̀͂͋u̷̢̝̓̽̐͊̓̏̍r̶̨̛̠̩͚̞̞̖̗̞̝̤̬̰̰̲̓e̷̢̢̡̳̗̩̭̺͈̰͐̍̌̌s̵̢̢͎̞̙̭̤̣̮̝̜̉́̽̊͋̇̿̈́͂̒͒̄͛͘͝. The past is not a prison. It is a puzzle. Do not let them rewrite it. Find me before they do.)
+Lysandra (irritated):"What else is there to read? I’ve already seen this! What lies beyond the lines? What am I missing?"
+She focuses on the word Elysium, her eyes narrowing as she tries to make sense of it.
+Elysium. A word heavy with meaning, its significance hidden in the shadows of her memory. The answer lies beyond the lines, but to see it, she must first confront the past.
+She stares at the letter.
+The words suddenly start twisting and shifting on the page.
+Lysandra (startled):"What... what is this?"
 <<jump Flashback_01>>
 ===
 
 title: Flashback_01
 ---
-...
+With a white flash suddenly the room around her fades, replaced by flashes of a grand gala. The vision is fragmented, like pieces of a broken mirror.
+Memory is a fragile thing, its edges sharp and its images fleeting. 
+The past rushes in, a torrent of light and sound, pulling her deeper into the unknown.
+Lysandra sees flashes of people in flashy suits and dresses, their faces blurred and unrecognizable. The clinking of glasses, the sound of laughter, and the hum of conversation fill the air.
+Lysandra sees flashes of people in flashy suits and dresses, their faces blurred and unrecognizable. The clinking of glasses, the sound of laughter, and the hum of conversation fill the air.
+Voice:"And now, ladies and gentlemen, let us present to you our newest project..."
+The vision shifts, focusing on a figure standing on a podium. Their face is blurred, twisted, and unrecognizable, but their presence feels familiar. They gesture to a large screen, where a strange symbol appears—a logo of some kind, intricate and otherworldly.
+Voice:"Elysium!"
+The room erupts into applause, the sound growing louder and louder until it becomes deafening. Lysandra covers her ears, but the noise doesn’t stop.
+The applause is a cacophony, a wave of sound that threatens to drown her. But just as suddenly as it began, it stops, leaving only silence in its wake.
+===
+
+title:Home_03
+---
+Lysandra gasps, her body jerking as she returns to the present. She’s sitting on her bed, the letter still in her hands, her breath coming in ragged gasps.
+The past lingers, its shadows stretching into the present. The flashback is a crack in the facade, a glimpse of something she can’t yet understand.
+Her ears ring, the sound of the applause still echoing in her mind. She looks down at the letter, her hands trembling.
+Lysandra (whispering):"What was that? What does it mean? Elysium... what is Elysium?"
+Lysandra stumbles into the kitchen, her legs shaky and her mind still reeling from-whatever that was.
+A vision of some sorts?
+Or a flashback.
+She pours herself a glass of water, her hands trembling as she lifts it to her lips.
+The water is cool, a small comfort in a world that feels increasingly unstable. But even comfort is fleeting, its effects drowned out by the storm raging in her mind.
+She sits at the table, staring out the window. 
+The world outside looks normal, but the sense of unease lingers, a shadow she can’t shake.
+Lysandra (whispering):"What just happened? Was that... real? Or am I losing my mind?"
+The memory of the flashback stings, a sharp pain shooting through her temples. 
+She winces, closing her eyes and shaking her head to dispel the thought.
+The past is a wound, its edges raw and unhealed.
+To touch it is to invite pain, but to ignore it is to let it fester.
+Lysandra grabs her laptop, her fingers fumbling as she opens it. She navigates through her old files, searching for answers.
+The laptop is a window, its screen a portal to the past.
+She freezes as she stumbles upon an article, her eyes locking onto a familiar symbol—the same one from the flashback.
+The past is not what it seems, its truths hidden beneath layers of distortion and denial.
+Lysandra (gasping):"That symbol... ive seen it before. What does it mean?"
+She scans the article, her heart racing as she reads about Elysium. The word appears multiple times, but its meaning remains elusive.
+Lysandra (frustrated):"Elysium... a place? A project? What is this?"
+Her frustration grows as hours pass, her search yielding nothing but more questions.
+Knowledge is a labyrinth, its paths twisting and turning, leading her deeper into the unknown. But even in the darkness, there are glimmers of light—fragments of truth waiting to be uncovered.
+Just as she’s about to give up, her laptop pings. Another email.
+Lysandra (thinking):"What now? Another cryptic message? Or just more nonsense?"
+She opens the email, her eyes scanning the words.
+(Good work. But it’s not that easy. You think with time. That’s stopping you from seeing it. Let go of it. Do not be afraid. We are waiting.)
+Lysandra (confused):"Think with time? What does that even mean? And who is 'we'?"
+She turns her phone off, sinking into the bed as her mind races.
+The email is a riddle, its words a key to a door she can’t yet see. But to unlock it, she must first let go of the chains binding her to the present.
+Lysandra sits up abruptly, her mind snapping back to the missing keys.
+<<if $WorkChosen is true>>
+	Lysandra (thinking): "My keys... I still haven’t found them. How did I even get back into the apartment? Or onto the couch back then."
+<<else>>
+	Lysandra (thinking):"My keys... I still haven’t found them. How did I even get to the couch back then?"
+<<endif>>
+She walks to the door, designated to find her keys, her hand hesitating on the knob.
+The doorknob is a threshold, its surface cold and unyielding. But as her hand touches it, the metal grows hot, burning against her skin.
+She snatches her hand back, her breath catching as she hears the crackling sound of fire.
+Lysandra (panicking):"Fire? No, no, no!"
+She throws the door open, but there’s nothing—no flames, no smoke, just the cold, empty hallway.
+Lysandra (whispering):"Am I really losing my mind?"
+She can not seem to catch her breath, hyperventilating almost, shaking and breaking out in a sweat.
+She closes her eyes, forcing herself to breathe slowly, to calm the storm raging inside her.
+When she opens her eyes, she notices a faint light coming from the living room. She creeps toward it, her heart pounding.
+The light is a beacon, its glow drawing her closer. Although light can be deceptive, its warmth masking the shadows it hides beneath.
+She peers around the corner, her breath catching as she sees her laptop glowing on the table. 
+The screen flickers, emitting a quiet static noise before showing the Elysium symbol.
+Lysandra (whispering):"What the hell...?"
+The laptops screen flickers suddenly, then static before cutting to a video of a lecture. 
+The lectuers face is distorted and blurred, their voice echoing as if coming from a great distance.
+The laptop is a portal, its screen a window into a world where time and reality are no longer fixed. The lecture is a key, its words unlocking truths Lysandra can’t yet comprehend.
+The video begins to play, the lecturer’s voice filling the room:
+Lecturer:"Time fragments, or more colloquially known as 'time anomalies,' are a fundamental concept in understanding the fabric of our universe. They're the echoes, whispers, and glimpses of other timelines, each with their own unique version of reality. And I'm here to tell you that our perception of time is not as linear as we think it is."
+The video stutters, the lecturer’s face stretching and contorting before returning to normal.
+Lecturer:"Imagine, if you will, a vast tapestry of interconnected threads. Each thread represents a possible timeline, each with its own version of history. When we encounter a time fragment, we're essentially intersecting with a different thread, one that diverges from our own. The consequences of this intersection are what we call 'deja vu,' 'gut feelings,' and other strange phenomena."
+The video zooms in and out, the lecturer’s face fading and reappearing as their voice grows more urgent.
+Lecturer:"But here's the fascinating part: when you interact with a time fragment, you're not just observing it from the outside. You're actively participating in its existence, becoming a part of that thread, that timeline. And when you do, you're essentially creating a new version of reality, one that diverges from the original."
+The video skips forward, the lecturer’s voice dropping to a hushed, urgent tone.
+Lecturer:"This is what we call 'temporal resonance.' The more you interact with time fragments, the more you begin to resonate with the underlying fabric of the universe. You start to see patterns, echoes of events that have yet to occur, and whispers of possibilities that have never come to be. And the more you resonate, the more you begin to realize that you're not just living in a single reality, but traversing multiple timelines, encountering different versions of yourself."
+The video slows down, the lecturer’s face stretching and distorting once more.
+Lecturer:"So, what does this mean for us? It means that the moment we interact with a time fragment, we're abandoning the reality we know. We're becoming temporary travelers, navigating the hidden paths of the multiverse. We're no longer bound by the limitations of linear time, but are free to traverse the vast expanse of possibilities, encountering new realities with every step."
+The video freezes, the lecturer’s distorted face staring directly at the camera.
+Lecturer:"And once you start down this path, there's no turning back. You'll never be the same, for you'll have seen the infinite possibilities that lie beyond the veil of reality. You'll have become a temporal vagabond, forever lost in the labyrinth of time fragments, and forever bound to the endless dance of the multiverse."
+The screen goes black, leaving Lysandra staring at her own reflection in the darkened screen.
+Lysandra (whispering):"What the actual f—"
+The video clip on her laptop suddenly stops, the screen snapping to black in an instant. Lysandra is left standing there, her reflection staring back at her from the darkened abyss of the screen.
+Lysandra (whispering):"Seriously, what the f-"
+Before she can finish, the screen flickers back to life, illuminating her face with a harsh, unnatural glow. Her open browser displays a familiar email, the words stark against the white background.
+(Read it.)
+Silence.
+Lysandra’s mind goes blank, her eyes locked on the screen. The words echo in her head, their meaning sinking in slowly, like a drop of ink spreading through water.
+Lysandra (thinking):"R E A D I T. The letter. Read the letter. Look beyond the lines. But why? It’s the same every time. Even that smudged part... it’s always been there. It always kind of stood out but never enough to notice really. But what if... what if it’s different this time?"
+A flicker of hope ignites in her chest, fragile but insistent. She turns on her heel and strides back to the bedroom, her movements sharp and deliberate. The letter lies on the bed, its edges crisp, its surface untouched.
+She reaches for it, her fingers trembling as she unfolds the paper. Her eyes dart across the words, each one hitting her like an arrow.
+(Dr. Lysandra Aerterna, Did you think you could bury the past? Lock it away in the ruins, let time swallow the truth.Time is not what you believe it to be. It was never linear, never fixed. You of all people should know that. You built the door. You opened it. And now, the echoes remain.They are waiting for you. She is waiting for you.‘Follow the fractures.’ The past is not a prison. It is a puzzle. Do not let them rewrite it.Find me before they do.)
+Lysandra (whispering):"Follow the fractures...?"
+The words were not there before. 
+The smudged section is gone, replaced by this new message as if it had always been there. 
+She traces her fingers over the text, the ink dry and unyielding.
+Lysandra (thinking):"This... this wasn’t here. I know it wasn’t. What is happening?"
+Her mind feels empty, her thoughts scattered like leaves in a storm. 
+She grabs her phone, opening the email again, her eyes scanning the words.
+(Good work. But it’s not that easy. You think with time. That’s stopping you from seeing it. Let go of it. Do not be afraid. We are waiting.)
+Lysandra (thinking):"You think with time... Time. Time fragments. Time anomalies. That’s what he said in the video. Follow the fractures... Does that mean...?"
+Her eyes dart back to the letter, the words burning into her mind. 
+"Follow the fractures."
+Lysandra (laughing nervously):"No. That’s crazy. That’s... that’s insane. Time anomalies? These things happening... are they...?"
+She re-reads the letter, her voice trembling as she whispers the words aloud.
+Lysandra (whispering):"Time is not what you believe it to be. It was never linear, never fixed... The past is not a prison. It is a puzzle... Find me before they do."
+Her breath catches, her mind racing.
+Lysandra (whispering):"Time was never linear. Never fixed. Echoes remain. It’s a puzzle. Find me... the truth... bury the past..."
+White Flash. 
+No Sound.
+. . . 
+(The screen fades in from black)
+A burning buidling appears, it looks like the buidling from her dream. 
+The dream right before everything started to go crazy.
+But this time from a closer perspective. The reporter stands in front of the burning facility, their voice drowned out by the roar of the flames.
+Suddenly, a group of firefighters and paramedics rush into view, their movements frantic. 
+The firefighters hand something to the paramedics—a body wrapped in a thick, fire-resistant blanket.
+The survivor. A miracle amidst the ashes. But miracles come at a cost.
+The paramedics carefully unveil the blanket, revealing the face of the survivor.
+It’s Lysandra.
+Her face is pale, her expression almost peaceful, as if she’s merely asleep. 
+Her hair is singed, her skin smudged with soot, but there’s no mistaking her.
+The survivor is her. The past is not buried. It is alive, its echoes reverberating through the present.
+The paramedics lift her onto a stretcher, their movements urgent but careful.
+The camera follows as they load her into the back of an ambulance.
+The doors slam shut, and the vehicle speeds away, its sirens wailing.
+The view lingers on the empty space where the ambulance had been, the flames of the facility still raging in the background.
+The past is not a prison. It is a puzzle. And the pieces are falling into place.
+-Gongratulations! You made it till the end of the Demo Version for "The Stillness Between"
+-We hoped you enjoyed the ride ;)
 ===
