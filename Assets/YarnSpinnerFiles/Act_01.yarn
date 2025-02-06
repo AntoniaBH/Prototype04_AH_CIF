@@ -512,12 +512,12 @@ title: ChoiceTree_02
 		<<jump Kitchen_01>>
 	<<endif>>
 <<endif>>
-->clean.
+->Clean.
 	<<if $CleanAbsolved is false>>
 		<<if $Act_01_RepeatCount is 1>>
 			Lysandra grabs a rag and begins wiping down the surfaces, the motion repetitive and soothing. She sweeps the floors, the dust swirling in the air before settling.
 			Cleaning is a small act of control, a way to impose order on chaos. 
-			A clean surfaces can’t erase the stains of the past.
+			Clean surfaces can’t erase the stains of the past.
 			<<set $CleanAbsolved = true>>
 			<<jump ChoiceTree_02>>
 		<<elseif $Act_01_RepeatCount is 2>>
@@ -545,7 +545,8 @@ title: ChoiceTree_02
 	<<if $LaundryAbsolved is false>>
 		<<if $Act_01_RepeatCount is 1>>
 			Lysandra gathers her clothes, the fabric soft in her hands. She loads the washer, the sound of water filling the machine a comforting rhythm.
-			Laundry is a cycle, endless and repetitive. But even in repetition, there’s a strange comfort—a reminder that some things can be made new again.
+			Laundry is a cycle, endless and repetitive. 
+			In the repetition, there’s a strange comfort—a reminder that some things can be made new again.
 			<<set $LaundryAbsolved = true>>
 			<<jump ChoiceTree_02>>
 		<<elseif $Act_01_RepeatCount is 2>>
@@ -602,8 +603,7 @@ title: ChoiceTree_02
 	<<if $WaterPlantsAbsolved is false>>
 		<<if $Act_01_RepeatCount is 1>>
 			Lysandra moves from plant to plant, the water trickling into the soil. The leaves glisten in the light, a small sign of life.
-			Plants need care to thrive, a reminder that even the smallest acts can sustain life.
-			Not even thriving plants can’t fill the emptiness inside.
+			Plants need care to thrive, even the smallest acts can sustain life.
 			<<set $WaterPlantsAbsolved = true>>
 			<<jump ChoiceTree_02>>
 		<<elseif $Act_01_RepeatCount is 2>>
@@ -655,7 +655,7 @@ title: Kitchen_01
 	<<endif>>
 <<if $Act_01_RepeatCount is 1>>
 	The plate sits empty, the last bite of dinner a distant memory.
-	The kitchen is quiet now, the hum of the microwave or the sizzle of the stove replaced by stillness.
+	The kitchen is quiet now.
 	Lysandra sits at the table, the remnants of the meal in front of her.
 	The evening stretches ahead, a blank expanse of time waiting to be filled.
 	The silence feels heavy, and the options for distraction loom—each one a small escape from the weight of the day.
@@ -799,6 +799,7 @@ title: Bathroom_02
 
 title: Bedroom_01
 ---
+<<set $BaseSuccessRate = 65>>
 <<set $randomValue = random() * 100>>
 <<if $Act_01_RepeatCount is 2>>
 	<<set $randomValue = $randomValue + 25>>

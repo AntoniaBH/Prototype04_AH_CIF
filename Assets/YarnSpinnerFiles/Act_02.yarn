@@ -44,7 +44,7 @@ Still, as she moves to start the day, the silence feels heavier than usual. As i
 
 title: Bathroom_03
 ---
-<<if $BrushTeethAbsolved is true and $WashFaceAbsolved is true and $QuickShower is true>>
+<<if $BrushTeethAbsolved is true and $WashFaceAbsolved is true and $QuickShowerAbsolved is true>>
 	With her morning routine complete, Lysandra steps out of the bathroom.
 	Despite her best efforts, the strange incidents linger in her thoughts. Small things. Insignificant, really.
 	And yet, something feels… off.
@@ -54,7 +54,7 @@ title: Bathroom_03
 <<endif>>
 ->Brush teeth.
 	<<if $BrushTeethAbsolved is true>>
-		...
+		There is no need to repeat this. Or did you forget you have already done this?
 		<<jump Bathroom_03>>
 	<<elseif $BrushTeethAbsolved is false>>
 		Lysandra steps to the sink, reaching for the familiar mug that holds her toothbrush—
@@ -72,7 +72,7 @@ title: Bathroom_03
 	<<endif>>
 ->Wash face.
 	<<if $WashFaceAbsolved is true>>
-		...
+		Already done. No need to repeat.
 		<<jump Bathroom_03>>
 	<<elseif $WashFaceAbsolved is false>>
 		The cold water shocks her skin awake. She leans over the sink, letting it run over her face, washing away the last remnants of sleep.
@@ -90,7 +90,7 @@ title: Bathroom_03
 	<<endif>>
 ->Quick Shower
 	<<if $QuickShower is true>>
-		...
+		Repition is tedious, the task is already done.
 		<<jump Bathroom_03>>
 	<<elseif $QuickShowerAbsolved is false>>
 		The shower tiles glisten. Droplets cling to the walls, the floor damp beneath her feet.
