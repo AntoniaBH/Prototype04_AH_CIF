@@ -112,27 +112,49 @@ title: Bathroom_03
 title: Kitchen_02
 ---
 <<if $ChosenCoffee is true and $ChosenTea is true>>
-	...
+	Defeated, Lysandra grabs a glass of water, the cool liquid doing little to soothe her growing irritation. She sets the glass down with a quiet clink, her mind already moving to the next task.
+	Water is simple, uncomplicated. 
+	But simplicity can feel hollow when the world refuses to cooperate.
 	<<jump Kitchen_03>>
 <<elseif $ChosenCoffee is true and $ChosenTea is false>>
-	...
+	Lysandra opens the cabinet, her hand reaching for the box of tea bags. But as she pulls it down, she notices how light it feels. 
+	She opens it, only to find it empty—a single crumpled tea bag wrapper mocks her from the bottom.
+	The tea is gone, its absence a quiet betrayal. Even the rituals of the morning seem to conspire against her, leaving her adrift in a sea of small, unanswerable questions.
+	Lysandra stares at the empty box, her confusion giving way to irritation.
+	Lysandra (thinking):"Did I really use the last one yesterday? How could I not have noticed?"
+	She sets the box down, her frustration bubbling to the surface.
 	<<set $ChosenTea = true>>
 	<<jump Kitchen_02>>
 <<elseif $ChosenTea is true and $ChosenCoffee is false>>
-	...
+	Lysandra reaches for the container of ground coffee beans, her fingers brushing against the lid. 
+	She opens it, expecting the rich aroma to greet her, but instead finds the container nearly empty—only a few specks of coffee powder cling to the bottom.
+	The container is empty, its promise unfulfilled.
+	A small oversight, perhaps, even the smallest things can unravel her sense of control.
+	Lysandra frowns, her brow furrowing as she stares at the empty container.
+	Lysandra (thinking):"How did I not notice this? I could’ve sworn there was more..."
+	She sighs, setting the container aside.
 	<<set $ChosenCoffee = true>>
 	<<jump Kitchen_02>>
-<<elseif $ChosenCoffee is true and $ChosenTea is true>>
-	...
-	<<jump Kitchen_03>>
 <<endif>>
 ->Coffee.
-	...
+	Lysandra reaches for the container of ground coffee beans, her fingers brushing against the lid. 
+	She opens it, expecting the rich aroma to greet her, but instead finds the container nearly empty—only a few specks of coffee powder cling to the bottom.
+	The container is empty, its promise unfulfilled.
+	A small oversight, perhaps, even the smallest things can unravel her sense of control.
+	Lysandra frowns, her brow furrowing as she stares at the empty container.
+	Lysandra (thinking):"How did I not notice this? I could’ve sworn there was more..."
+	She sighs, setting the container aside.
+	Lysandra (thinking):"No time to buy more. I’ll just make tea instead."
 	<<set $ChosenCoffee = true>>
-	<<jump Kitchen_02>>
-	
+	<<jump Kitchen_02>>	
 ->Tea.
-	...
+	Lysandra opens the cabinet, her hand reaching for the box of tea bags. But as she pulls it down, she notices how light it feels. 
+	She opens it, only to find it empty—a single crumpled tea bag wrapper mocks her from the bottom.
+	The tea is gone, its absence a quiet betrayal. Even the rituals of the morning seem to conspire against her, leaving her adrift in a sea of small, unanswerable questions.
+	Lysandra stares at the empty box, her confusion giving way to irritation.
+	Lysandra (thinking):"Did I really use the last one yesterday? How could I not have noticed?"
+	She sets the box down, her frustration bubbling to the surface.
+	Lysandra (thinking):"No time to fix this. Coffee it is, then."
 	<<set $ChosenTea = true>>
 	<<jump Kitchen_02>>
 ===
@@ -140,36 +162,75 @@ title: Kitchen_02
 title: Kitchen_03
 ---
 <<if $ChosenToast is true and $ChosenCereal is true>>
-	...
+	Lysandra chugs her glass of water, the cool liquid doing little to soothe her growing irritation. 
+	She leaves the kitchen in disarray, her mind already racing toward the next task.
 	<<jump ChoiceTree_03>>
 <<elseif $ChosenToast is true and $ChosenCereal is false>>
-	...
+	She abandons the toast and reaches for the cereal box, only to find the milk carton empty.
+	Even the simplest comforts elude her. The milk is gone, its absence a final straw in a morning already frayed at the edges.
 	<<set $ChosenCereal = true>>
 	<<jump Kitchen_03>>
 <<elseif $ChosenCereal is true and $ChosenToast is false>>
-	...
+	She searches the cabinets, finding a single slice of bread tucked away in the back. It’s stale, but edible. 
+	She places it in the toaster, but the machine refuses to cooperate. 
+	The bread burns, filling the kitchen with the acrid smell of failure.
+	The toaster fails, its purpose unfulfilled. 
+	The bread blackens, a symbol of her morning’s unraveling.
 	<<set $ChosenToast = true>>
 	<<jump Kitchen_03>>
 <<endif>>
 ->Toasted toast.
-	...
+	Lysandra searches the cabinets, her fingers brushing against the back of a shelf. Her hand closes around a single slice of bread, stale but still edible.
+	A small victory, but victories are fleeting.
+	The bread is stale, its edges brittle, a reminder of time’s relentless march.
+	She places the bread in the toaster, turning the dial to a medium setting.
+	But the toaster remains silent, its coils cold.
+	She turns the dial higher, hoping for a spark, but instead, the bread begins to smoke, then burn.
+	The toaster fails, its purpose unfulfilled. 
+	The bread blackens, a symbol of her morning’s unraveling.
+	Lysandra stares at the charred toast, her frustration mounting.
+	Lysandra (thinking):"Of course. Why would anything work today?"
 	<<set $ChosenToast = true>>
 	<<jump Kitchen_03>>
 ->Cereal & milk. 
-	...
+	Lysandra grabs the cereal box, relieved to find it still half-full. But as she reaches for the milk carton, its lightness betrays its emptiness.
+	The milk is gone, its absence a quiet reminder of her own neglect. 
+	Even the smallest things slip through her fingers, leaving her grasping at shadows.
+	She sets the carton aside, her frustration bubbling over.
+	Lysandra (thinking):"Toast, then. At least that’s simple."
 	<<set $ChosesnCereal = true>>
 	<<jump Kitchen_03>> 
-...
 ===
 
 title: ChoiceTree_03
 ---
-...
+Lysandra finishes dressing, her frustration mounting as she searches for her shoes.
+She finally finds them under the bed, their usual place by the door abandoned.
+Even the shoes have moved, their displacement a small but pointed hint of the chaos creeping into her life.
+She slips them on, grabs her handbag, and heads for the door.
+But as her hand reaches for the knob, a sudden unease grips her.
+Lysandra (thinking):"Do I have everything? After this morning, I can’t afford to forget anything else."
+ She checks her bag, her mind running through a mental checklist. Wallet, phone, laptop—all there.
+But the keys are missing.
+The keys are gone, their absence the final twist in a morning already unraveling.
+Without them, she is trapped—unable to leave, unable to stay, caught in a limbo of her own making.
+Lysandra’s frustration boils over.
+She throws pillows aside, knocks over a pile of papers, and trips over her bag in the hallway.
+Her search grows frantic, her movements sharp and uncoordinated. 
+The apartment, once a refuge, now feels like a prison, its walls closing in with each passing moment.
 ->"..left them at work..."
-	...
+	Lysandra stops, her breath coming in short, frustrated gasps.
+	Lysandra (thinking):"Maybe I left them at work. I can’t stay here—I need to get out of this apartment."
+	She grabs her bag and heads for the door, determined to find her keys at the office.
+	The office offers escape, a change of scenery.
+	And there too, the shadows of her morning linger, waiting to be confronted.
 	<<jump Office_01>> 
 ->"...have to be here..."
-	...
+	Lysandra pauses, her frustration giving way to resignation.
+	Lysandra (thinking):"They have to be here somewhere. I’ll just work from home until I find them."
+	She sets her bag down and begins another search, her movements slower now, weighed down by the morning’s failures.
+	The apartment holds its secrets close, its corners hiding more than dust and forgotten objects. 
+	The keys are here, somewhere, but finding them will require patience she no longer has.
 	<<jump Home_01>>
 ===
 
