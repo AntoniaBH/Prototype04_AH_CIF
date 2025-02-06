@@ -8,25 +8,48 @@ tags:
 <<set $QuickShowerAbsolved = false>>
 <<declare $ChosenToast = false>>
 <<declare $ChosenCereal = false>>
-...
+The letter lingers in her hands, its words pressing into her mind like an echo she can’t quite silence.
+A prank. It has to be.
+Her fingers tighten around the paper before she turns, crosses the room, and drops it into the trash without a second glance. The lid swings shut with a quiet finality.
+The past is the past.
+She tells herself that. She wants to believe it.
 <<jump AbnormalRoutine>>
 ===
 
 title: AbnormalRoutine
 ---
-...
+The alarm cuts through the silence. Sharp. Familiar. Unchanging.
 ->Turn alarm off.
-	...
+	Lysandra reaches for the alarm clock, fingers hovering over the button. But before she can press it—
+	Silence.
+	The beeping cuts out on its own.
+	She freezes, staring at the phone as if willing it to explain itself. It never does this. It shouldn’t be able to.
+	A trick of the mind? A malfunction?
+	Her hand lingers in the air for a second longer before she exhales and pulls it away. 
+	It’s nothing. 
+	Probably.
+	And yet, the feeling lingers—an unease curling at the edges of her thoughts, faint but persistent.
 ->Leave it.
-	...
-...
+	She ignores the alarm, letting it ring. Letting it fill the room like it always does.
+	Then, without warning—
+	Silence.
+	The sound cuts out, unnatural in its suddenness. Lysandra tenses. The alarm never stops on its own.
+	She glances at it warily, waiting for the noise to return, for some sign of normality. Nothing.
+	Her mind starts running through explanations—faulty wiring, a glitch, anything rational.
+	And yet, the feeling remains. A weight in the back of her mind, quiet but unshakable.
+Lysandra shakes her head, pushing the thoughts aside. She’s just overthinking.
+Still, as she moves to start the day, the silence feels heavier than usual. As if the world is holding its breath.
 <<jump Bathroom_03>>
 ===
 
 title: Bathroom_03
 ---
 <<if $BrushTeethAbsolved is true and $WashFaceAbsolved is true and $QuickShower is true>>
-	...
+	With her morning routine complete, Lysandra steps out of the bathroom.
+	Despite her best efforts, the strange incidents linger in her thoughts. Small things. Insignificant, really.
+	And yet, something feels… off.
+	She shakes her head. Breakfast. That’s all she needs to focus on.
+	The kitchen awaits.
 	<<jump Kitchen_02>>
 <<endif>>
 ->Brush teeth.
@@ -34,24 +57,54 @@ title: Bathroom_03
 		...
 		<<jump Bathroom_03>>
 	<<elseif $BrushTeethAbsolved is false>>
-	...
-	<<set $BrushTeethAbsolved = true>>
+		Lysandra steps to the sink, reaching for the familiar mug that holds her toothbrush—
+		But it’s not there.
+		She pauses, frowning. Her hand hovers in empty space before lowering as she scans the counter. Maybe it tipped over?
+		No. It’s not on the floor, not on the nearby shelf, nowhere it should be.
+		Her mind scrambles for an explanation, but instead of checking the obvious places again, her gaze drifts toward the cabinet. A strange hunch—almost instinctive, yet irrational.
+		She opens the door.
+		There it is.
+		The mug sits neatly on the shelf, toothbrush resting inside, as if it had always been there.
+		Lysandra exhales, a mix of relief and unease. Had she put it there last night? She doesn’t remember doing so. But it’s here now, so she must have.
+		Shrugging off the thought, she grabs it and brushes her teeth, though the question lingers in the back of her mind.
+		<<set $BrushTeethAbsolved = true>>
+		<<jump Bathroom_03>>
 	<<endif>>
 ->Wash face.
 	<<if $WashFaceAbsolved is true>>
 		...
 		<<jump Bathroom_03>>
 	<<elseif $WashFaceAbsolved is false>>
-	...
-	<<set $WashFaceAbsolved = true>>
+		The cold water shocks her skin awake. She leans over the sink, letting it run over her face, washing away the last remnants of sleep.
+		Still dripping, she straightens and reaches for the cabinet above, fingers blindly finding her face wash.
+		She swings the door shut—
+		Something flashes in the mirror.
+		Not her reflection. Not quite.
+		It’s gone before she can focus on it, a smear of wrongness vanishing the instant the cabinet clicks closed.
+		Lysandra freezes, heart hammering against her ribs. Her reflection stares back, identical in every way, perfectly mirroring her tension.
+		She forces herself to breathe. Had she really seen something, or was it just a trick of the light? A stray shadow?
+		She tries to recall the image, but it slips from her mind like water through her fingers.
+		Swallowing the unease, she shakes it off and continues.
+		<<set $WashFaceAbsolved = true>>
+		<<jump Bathroom_03>>
 	<<endif>>
 ->Quick Shower
 	<<if $QuickShower is true>>
 		...
 		<<jump Bathroom_03>>
 	<<elseif $QuickShowerAbsolved is false>>
-	...
-	<<set $QuickShowerAbsolved = true>>
+		The shower tiles glisten. Droplets cling to the walls, the floor damp beneath her feet.
+		Lysandra stops.
+		She hadn’t showered this morning.
+		Her chest tightens as she stares at the wet surfaces, moisture trickling lazily down the glass.
+		Did she forget to air out the bathroom last night? Did the water somehow linger overnight? It makes sense. It has to.
+		And yet, standing here, staring at the undeniable evidence of recent use, the explanation feels flimsy.
+		Her fingers twitch. No one else lives here. No one else has a key.
+		She swallows, steeling herself.
+		It’s nothing. Just poor ventilation. She won’t let her mind spiral over something so trivial.
+		Turning away, she forces herself to move on.
+		<<set $QuickShowerAbsolved = true>>
+		<<jump Bathroom_03>>
 	<<jump Bathroom_03>>
 	<<endif>>
 ===
